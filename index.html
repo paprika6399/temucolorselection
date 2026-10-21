@@ -1,0 +1,3866 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>招商复色标准指南 · 男内 / 童内</title>
+<style>
+:root{
+  --ink:#16202E; --ink2:#2C3A4C; --body:#3B4A5C; --muted:#68788B; --faint:#95A3B2;
+  --accent:#F08A24; --accent-d:#C4690F; --accent-soft:#FFF3E3; --accent-line:#F3D2AB;
+  --ok:#0E7C6B; --ok-bg:#E8F7F2;
+  --try:#2C5AA8; --try-bg:#EDF3FC;
+  --drop:#A61B45; --drop-bg:#FCEDF2;
+  --hold:#5B6878; --hold-bg:#EFF2F6;
+  --line:#E1E7EE; --line2:#EDF1F5; --bg:#F3F5F8; --card:#fff;
+  --stage:clamp(266px,34vh,404px); --rail:98px;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+  --sw:20px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;color:var(--body);font-size:15.8px;line-height:1.66;
+  font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,sans-serif;
+  background-color:var(--bg);
+  background-image:radial-gradient(circle at 1px 1px,rgba(22,32,46,.045) 1px,transparent 0);
+  background-size:22px 22px;
+  padding-top:calc(var(--stage) + var(--rail));
+}
+h1,h2,h3,h4{margin:0;color:var(--ink);font-weight:700;line-height:1.28}
+p{margin:0}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+::selection{background:#FFE0BC;color:var(--ink)}
+
+/* ================= STAGE : fixed report head ================= */
+.stage{
+  position:fixed;top:0;left:0;right:0;z-index:80;height:var(--stage);
+  background:linear-gradient(180deg,#FFFFFF 0%,#FCFDFE 62%,#F8FAFC 100%);
+  border-bottom:1px solid var(--line);
+  box-shadow:0 8px 24px -18px rgba(22,32,46,.35);
+  overflow-y:auto;overflow-x:hidden;scrollbar-width:none;
+}
+.stage::-webkit-scrollbar{display:none}
+.stage-inner{
+  max-width:1280px;margin:0 auto;min-height:100%;
+  padding:clamp(14px,1.9vh,20px) clamp(20px,3vw,40px) 14px;
+  display:grid;grid-template-columns:minmax(276px,.76fr) minmax(0,1.64fr);
+  grid-template-rows:1fr auto;gap:12px clamp(18px,2.2vw,28px);
+  align-content:center;
+}
+.title-col{display:flex;flex-direction:column;justify-content:center;min-width:0}
+.eyebrow{font-family:var(--mono);font-size:10.6px;font-weight:700;letter-spacing:.24em;color:var(--accent);white-space:nowrap}
+.title-col h1{font-size:clamp(21px,2.35vw,33px);letter-spacing:-.025em;margin:6px 0 5px;line-height:1.15}
+.title-col .sub{font-size:13px;color:var(--muted)}
+.title-col .tag{font-size:12.4px;color:var(--faint);margin-top:6px;line-height:1.55}
+.title-col .tag b{color:var(--accent-d);font-weight:700}
+.title-col .lead{font-size:11.4px;color:var(--faint);margin-top:8px;padding-top:7px;border-top:1px dashed var(--line);letter-spacing:.01em}
+
+.q-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;min-width:0;align-items:center}
+.qcard{
+  position:relative;background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:12px 15px 13px;overflow:hidden;min-width:0;
+  box-shadow:0 1px 2px rgba(22,32,46,.03);
+}
+.qcard::before{content:"";position:absolute;left:0;top:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--accent),#F9C077 70%,rgba(249,192,119,0))}
+.qh{display:flex;align-items:baseline;gap:8px;min-width:0}
+.qlab{font-family:var(--mono);font-size:10.6px;font-weight:800;color:var(--accent);letter-spacing:.08em}
+.qh h3{font-size:15.6px;letter-spacing:-.01em;white-space:nowrap}
+.qsub{font-size:11.6px;color:var(--muted);margin-top:2px}
+.qlines{list-style:none;margin:8px 0 0;padding:8px 0 0;border-top:1px dashed var(--line);display:grid;gap:3px}
+.qlines li{position:relative;padding-left:12px;font-size:12.2px;line-height:1.52;color:var(--body)}
+.qlines li::before{content:"";position:absolute;left:0;top:.64em;width:4px;height:4px;border-radius:50%;background:#C9D3DF}
+.qfoot{display:inline-block;margin-top:7px;font-size:11px;font-weight:700;color:var(--accent-d);
+  background:var(--accent-soft);border:1px solid #FBE3C8;padding:2px 8px;border-radius:5px}
+
+.blocks{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr) minmax(160px,.72fr);
+  border-top:1px solid var(--line2);padding-top:9px;gap:0;min-width:0}
+.blk{display:flex;gap:10px;align-items:flex-start;padding:0 18px 0 0;min-width:0}
+.blk .no{font-family:var(--mono);font-size:10.6px;font-weight:800;color:var(--accent);padding-top:2px;letter-spacing:.04em}
+.blk h4{font-size:12.6px;letter-spacing:.01em;white-space:nowrap}
+.blk p{font-size:11.2px;color:var(--muted);line-height:1.45;margin-top:1px}
+.blk.t{flex-direction:column;gap:0;border-left:1px solid var(--line2);padding-left:18px}
+.blk.t h4{font-size:12.2px;color:var(--accent-d)}
+
+/* ================= RAIL : centered tabs + chips ================= */
+.rail{
+  position:fixed;top:var(--stage);left:0;right:0;z-index:79;height:var(--rail);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
+  padding:9px 0 10px;
+  background:rgba(255,255,255,.93);backdrop-filter:saturate(1.7) blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.tabrow,.chipsrow{width:100%;max-width:1280px;padding:0 clamp(20px,3vw,40px)}
+.tabrow{position:relative;display:flex;justify-content:center}
+.seg{display:flex;gap:3px;padding:3px;background:#EAEEF4;border-radius:11px}
+.tab{
+  display:flex;align-items:center;gap:7px;padding:6px 19px;border-radius:9px;
+  font-size:14.4px;font-weight:600;color:var(--muted);transition:.2s;white-space:nowrap;
+}
+.tab i{font-family:var(--mono);font-style:normal;font-size:10.6px;font-weight:700;color:var(--faint)}
+.tab:hover{color:var(--ink2)}
+.tab[aria-selected="true"]{background:#fff;color:var(--ink);box-shadow:0 1px 3px rgba(22,32,46,.14)}
+.tab[aria-selected="true"] i{color:var(--accent)}
+.trend-btn{position:absolute;right:clamp(20px,3vw,40px);top:50%;transform:translateY(-50%);
+  display:flex;align-items:center;gap:6px;padding:6px 13px;border-radius:8px;
+  font-size:12.6px;color:var(--muted);border:1px solid var(--line);background:#fff;transition:.18s;white-space:nowrap}
+.trend-btn:hover{color:var(--accent-d);border-color:var(--accent-line);background:#FFFBF5}
+.chipsrow{overflow-x:auto;scrollbar-width:none}
+.chipsrow::-webkit-scrollbar{display:none}
+.chips{display:flex;gap:7px;width:max-content;margin:0 auto;padding:1px 2px}
+.chip{
+  padding:5px 14px;border-radius:999px;font-size:13.4px;color:var(--body);
+  border:1px solid transparent;transition:.18s;white-space:nowrap;
+}
+.chip:hover{background:#fff;border-color:var(--line);color:var(--ink)}
+.chip.on{background:var(--ink);border-color:var(--ink);color:#fff;box-shadow:0 2px 8px -2px rgba(22,32,46,.45)}
+
+/* ================= MAIN ================= */
+main{max-width:1280px;margin:0 auto;padding:20px clamp(20px,3vw,40px) 72px}
+.view{animation:fadeUp .28s cubic-bezier(.22,.7,.3,1) both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+.cat-top{display:flex;align-items:flex-start;gap:15px;margin-bottom:16px}
+.bignum{flex:none;font-family:var(--mono);font-size:clamp(28px,3.6vw,42px);font-weight:800;
+  color:#D7DFE8;line-height:.95;letter-spacing:-.05em;padding-top:1px;min-width:2.1ch}
+.cat-title{flex:1;min-width:0}
+.cat-title .g{font-size:12.4px;font-weight:700;letter-spacing:.16em;color:var(--accent);display:block}
+.cat-title h2{font-size:clamp(24px,2.8vw,33px);letter-spacing:-.02em;margin:2px 0 3px}
+.cat-title h2 em{font-style:normal;font-family:var(--mono);font-size:.42em;font-weight:700;color:var(--faint);
+  margin-left:10px;letter-spacing:0;vertical-align:.24em}
+.cat-title .lede{font-size:13.4px;color:var(--muted);line-height:1.55}
+.pager{flex:none;display:flex;align-items:center;gap:3px;background:#fff;border:1px solid var(--line);border-radius:11px;padding:3px}
+.pg{width:32px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;
+  font-size:19px;line-height:1;color:var(--muted);transition:.16s}
+.pg:hover:not(:disabled){background:#F3F5F8;color:var(--ink)}
+.pg:disabled{opacity:.28;cursor:not-allowed}
+.pgc{font-family:var(--mono);font-size:12px;color:var(--faint);padding:0 7px;white-space:nowrap}
+.pgc b{color:var(--ink);font-weight:700}
+
+/* ---- table : single-line priority ---- */
+.tcard{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  box-shadow:0 1px 2px rgba(22,32,46,.04)}
+.twrap{overflow-x:auto}
+table{border-collapse:separate;border-spacing:0;width:100%;min-width:1140px;font-size:13.6px;table-layout:fixed}
+thead th{
+  background:#F5F8FB;color:var(--ink2);font-size:12.4px;font-weight:700;letter-spacing:.015em;
+  text-align:left;white-space:nowrap;padding:11px 12px;border-bottom:1px solid var(--line);
+}
+thead th:first-child{position:sticky;left:0;z-index:3;background:#F5F8FB}
+thead th:nth-child(6){text-align:center}
+tbody td{padding:10px 12px;border-bottom:1px solid var(--line2);vertical-align:middle;color:var(--body);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:hover td{background:#FCFDFF}
+td.c1{font-weight:700;color:var(--ink);position:sticky;left:0;z-index:1;background:#fff;
+  border-right:1px solid var(--line2)}
+tbody tr:hover td.c1{background:#FCFDFF}
+td.pri{text-align:left}
+.pill{display:inline-block;font-family:var(--mono);font-size:11.4px;font-weight:800;letter-spacing:.03em;
+  padding:1px 8px;border-radius:5px;background:var(--hold-bg);color:var(--hold)}
+.pill.p0{background:var(--accent-soft);color:var(--accent-d);border:1px solid #FBE3C8}
+.pill.p1{background:var(--try-bg);color:var(--try)}
+td.num{font-family:var(--mono);font-weight:700;color:var(--ink);text-align:right;font-size:13.4px}
+td.width{font-family:var(--mono);font-weight:700;color:var(--ink);font-size:13.6px;text-align:center}
+td.picks{white-space:normal;overflow:visible;text-overflow:clip;line-height:1.78;padding-right:14px}
+td.picks .tok{white-space:nowrap}
+td.picks b{color:var(--accent-d);font-weight:700;font-family:var(--mono);font-size:12.2px;letter-spacing:.02em;
+  white-space:nowrap}
+
+/* ---- blocks ---- */
+.edcard{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  margin-top:14px;box-shadow:0 1px 2px rgba(22,32,46,.04)}
+.chead{display:flex;align-items:center;gap:9px;padding:12px 16px 0}
+.chead h3{font-size:13.8px;letter-spacing:.01em}
+.chead .tag{font-family:var(--mono);font-size:10px;color:var(--faint);letter-spacing:.06em;margin-left:auto}
+.concl{
+  margin:12px 16px 15px;padding:11px 15px;border-radius:0 9px 9px 0;
+  border-left:4px solid var(--accent);background:linear-gradient(90deg,#FFF7EC,#FFFDFA);
+  font-size:13.2px;font-weight:700;color:var(--accent-d);line-height:1.62;
+}
+
+.vcard{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-top:14px;
+  box-shadow:0 1px 2px rgba(22,32,46,.04)}
+.vcard .chead{padding-bottom:9px}
+.vnote{padding:0 16px;font-size:12px;color:var(--faint);line-height:1.55}
+.vgrid{list-style:none;margin:0;padding:11px 16px 15px;display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));gap:3px 18px}
+.vgrid li{display:flex;align-items:center;gap:10px;padding:7px 8px;border-radius:8px;
+  min-width:0;transition:.15s;border:1px solid transparent}
+.vgrid li:hover{background:#FAFBFD;border-color:var(--line2)}
+.vgrid .nm{font-size:13.6px;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+
+.sw{
+  flex:none;display:block;width:var(--sw);height:var(--sw);border-radius:6px;
+  box-shadow:inset 0 0 0 1px rgba(22,32,46,.12),0 1px 2px rgba(22,32,46,.08);
+}
+.vgrid .sw{--sw:clamp(20px,1.6vw,25px);border-radius:7px}
+.panel .sw{--sw:18px}
+.badge{flex:none;margin-left:auto;font-size:11px;font-weight:700;padding:1px 8px;border-radius:999px;letter-spacing:.02em}
+.b-ok{color:var(--ok);background:var(--ok-bg)}
+.b-try{color:var(--try);background:var(--try-bg)}
+.b-off{color:var(--drop);background:var(--drop-bg)}
+.b-main{color:var(--accent-d);background:var(--accent-soft)}
+.b-dir{color:#3730A3;background:#EEF2FF}
+.b-follow{color:var(--hold);background:var(--hold-bg)}
+.b-recycle{color:#9F1239;background:var(--drop-bg)}
+.b-cut{color:#B91C1C;background:#FEF2F2}
+.b-stop{color:#64748B;background:#F1F5F9}
+
+.panels{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  position:relative;box-shadow:0 1px 2px rgba(22,32,46,.04)}
+.panel::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px}
+.panel.add::before{background:linear-gradient(180deg,#5FBFA8,#8FD3C3 60%,rgba(143,211,195,0))}
+.panel.drop::before{background:linear-gradient(180deg,#D98CA4,#EFC0CE 60%,rgba(239,192,206,0))}
+.panel .chead{padding:12px 16px 0 18px}
+.panel .chead h3{font-size:13.6px}
+.plist{list-style:none;margin:0;padding:7px 16px 14px 18px;display:grid;grid-template-columns:1fr 1fr;column-gap:22px}
+.plist li{display:flex;align-items:center;gap:9px;padding:6px 0;border-bottom:1px dashed #F0F3F7;min-width:0}
+.plist li:last-child{border-bottom:0}
+.plist .nm{font-size:13.2px;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+
+.ribbon{
+  margin-top:14px;display:flex;align-items:center;gap:13px;
+  background:linear-gradient(100deg,#16202E,#22303F 72%,#26374A);
+  border-radius:12px;padding:14px 20px;color:#EAF0F6;position:relative;overflow:hidden;
+  box-shadow:0 6px 18px -12px rgba(22,32,46,.7);
+}
+.ribbon::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--accent),#FBC688)}
+.ribbon p{font-size:13.8px;line-height:1.62;color:#E6EDF4;font-weight:600}
+.ribbon .mk{font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:#8FA2B5;flex:none}
+
+/* ---- trend ---- */
+.tview{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px clamp(18px,2.6vw,30px);
+  box-shadow:0 1px 2px rgba(22,32,46,.04)}
+.tgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:20px}
+.tcol h4{font-size:12.8px;letter-spacing:.02em;padding-bottom:9px;border-bottom:1px solid var(--line);margin-bottom:10px;color:var(--ink2)}
+.tcw{display:flex;gap:13px;align-items:center;padding:7px 0}
+.tcw .box{flex:none;width:clamp(46px,4.4vw,58px);height:clamp(46px,4.4vw,58px);border-radius:10px;
+  box-shadow:inset 0 0 0 1px rgba(22,32,46,.1),0 1px 3px rgba(22,32,46,.07)}
+.tcw .cn{font-size:13.6px;font-weight:700;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tcw .en{font-size:11.6px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tcw .rgb{font-family:var(--mono);font-size:10.4px;color:var(--faint);margin-top:1px;letter-spacing:.02em}
+.tfoot{margin-top:20px;padding:14px 17px;border-left:4px solid var(--accent);background:var(--accent-soft);
+  border-radius:0 9px 9px 0;display:grid;gap:5px}
+.tfoot p{font-size:13px;color:var(--accent-d);font-weight:600;line-height:1.62}
+footer{margin-top:24px;padding-top:15px;border-top:1px solid var(--line);display:flex;justify-content:space-between;
+  gap:12px;flex-wrap:wrap;font-size:12px;color:var(--faint)}
+
+/* ================= responsive ================= */
+@media (max-height:820px){:root{--stage:clamp(248px,32vh,330px)}}
+@media (max-width:1120px){
+  .vgrid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .tgrid{grid-template-columns:repeat(2,1fr)}
+  .title-col h1{font-size:clamp(20px,2.7vw,28px)}
+}
+@media (max-width:900px){
+  :root{--stage:clamp(250px,36vh,382px);--rail:96px}
+  .stage-inner{grid-template-columns:1fr;grid-template-rows:auto auto auto;gap:9px;align-content:start}
+  .title-col{justify-content:flex-start}
+  .cat-title .lede{font-size:12.6px}
+}
+@media (max-width:720px){
+  :root{--stage:clamp(236px,38vh,400px);--rail:92px}
+  .stage-inner{padding:10px 16px 9px}
+  .q-row{gap:9px}
+  .qh h3{font-size:14px}
+  .qsub{font-size:10.8px}
+  .qlines li{font-size:11.2px}
+  .blocks{grid-template-columns:1fr 1fr;row-gap:7px;padding-top:7px}
+  .blk:nth-child(2){padding-right:0}
+  .blk.t{grid-column:1/-1;border-left:0;padding-left:0;border-top:1px dashed var(--line2);padding-top:6px}
+  .blk h4{font-size:11.6px}
+  .blk p{font-size:10.6px}
+  .tabrow,.chipsrow{padding:0 12px}
+  .tab{padding:6px 14px;font-size:13.6px}
+  .trend-btn{right:12px;padding:5px 9px;font-size:11.6px}
+  .trend-btn span{display:none}
+  .chip{font-size:12.4px;padding:5px 11px}
+  main{padding:16px 16px 60px}
+  .vgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .panels{grid-template-columns:1fr}
+  .plist{grid-template-columns:1fr}
+  .bignum{display:none}
+  .cat-top{gap:10px}
+.concl{margin:11px 12px 13px;font-size:12.6px}
+  .ribbon{padding:12px 15px}
+  .ribbon p{font-size:12.8px}
+}
+@media (max-width:520px){
+  .title-col .tag{font-size:11px}
+  .vgrid{grid-template-columns:1fr}
+  .tgrid{grid-template-columns:1fr}
+  .pgc{font-size:11px;padding:0 4px}
+}
+@media print{
+  body{padding-top:0;background:#fff}
+  .stage,.rail{position:static;height:auto}
+  .view{animation:none}
+}
+</style>
+</head>
+<body>
+
+<header class="stage" id="stage"><div class="stage-inner" id="stageInner"></div></header>
+
+<div class="rail">
+  <div class="tabrow">
+    <div class="seg" role="tablist" aria-label="一级分组" id="seg"></div>
+    <button class="trend-btn" id="trendBtn">社媒趋势<span> →</span></button>
+  </div>
+  <div class="chipsrow"><nav class="chips" id="chips" aria-label="品类导航"></nav></div>
+</div>
+
+<main>
+  <div id="view"></div>
+  <footer id="foot"></footer>
+</main>
+
+<script type="application/json" id="site-data">{
+ "meta": {
+  "categories": 14,
+  "groups": [
+   "男内",
+   "童内"
+  ]
+ },
+ "cover": {
+  "eyebrow": "TEMU  SELECTION  GUIDE",
+  "title": "招商复色标准指南",
+  "subtitle": "男内童内类目 共计14个品类",
+  "tagline": "整份指南只回答两个问题：复几个颜色 & 复什么颜色",
+  "q1": {
+   "label": "Q1",
+   "title": "复几个颜色？",
+   "sub": "看「品类颜色边际」",
+   "lines": [
+    "爆旺率最高的那一档，就是效率最优色数",
+    "超过峰值后爆旺率快速回落，回落前的最后一档就是封顶",
+    "两者之间即推荐 SKC 宽度"
+   ],
+   "foot": ""
+  },
+  "q2": {
+   "label": "Q2",
+   "title": "复什么颜色？",
+   "sub": "看「站内外颜色清单」",
+   "lines": [
+    "P0 站内有效颜色并集，优先复色选项",
+    "P1 站内缺失色，按站内供需缺口定向补",
+    "P2 站外缺失色 ，只做差异化试色"
+   ],
+   "foot": "已剔除各自品类汰换色：抄清单即可，不必自行加减"
+  },
+  "lead": "每个品类页固定三块，从左到右看",
+  "blocks": [
+   {
+    "no": "01",
+    "title": "选色指南",
+    "desc": "按上架时间 P0–P5 对商品销量"
+   },
+   {
+    "no": "02",
+    "title": "品类颜色边际",
+    "desc": "确定每个品类的商品最优复几个色"
+   },
+   {
+    "no": "03",
+    "title": "颜色清单",
+    "desc": "确定具体复什么颜色"
+   }
+  ],
+  "trend": {
+   "title": "社媒趋势",
+   "desc": "汇总热门趋势色，供加色参考"
+  }
+ },
+ "categories": [
+  {
+   "slide": 2,
+   "table": [
+    [
+     "一级品类",
+     "优先级",
+     "商品上架时间范围",
+     "推荐加色商品类型",
+     "近15天日均销量门槛",
+     "推荐skc宽度",
+     "推荐加色"
+    ],
+    [
+     "保暖",
+     "P0",
+     "近7天",
+     "7天内上架热卖款",
+     "6",
+     "2-6",
+     "P0：黑色Black 灰色Grey 白色White 宝蓝色Royal Blue"
+    ],
+    [
+     "",
+     "P1",
+     "近8-30天",
+     "8-30天内上架热卖款",
+     "6",
+     "",
+     "P1：军绿色Army Green 深灰色Dark Grey 浅灰色Light Grey 红色Red 天蓝色Sky Blue"
+    ],
+    [
+     "",
+     "P2",
+     "近31天-90天",
+     "31天-90天内上架热卖款",
+     "15",
+     "",
+     ""
+    ],
+    [
+     "",
+     "P3",
+     "T365 ±60",
+     "去年同期上架，去年同期热卖",
+     "15",
+     "",
+     ""
+    ],
+    [
+     "",
+     "P4",
+     "近90-305天",
+     "非应季长青款",
+     "15",
+     "",
+     "P2：蓝色Blue 混色灰Heather Grey"
+    ],
+    [
+     "",
+     "P5",
+     "近730天",
+     "上架时间超1年近期热卖款",
+     "35",
+     "",
+     ""
+    ]
+   ],
+   "pic": [
+    0.45,
+    3.98,
+    4.36,
+    2.13
+   ],
+   "group": "男内",
+   "cat": "保暖",
+   "pageno": "02",
+   "subtitle": "选色指南按上架时间对号，边际定色数，清单定具体颜色；清单已剔除本品类汰换色",
+   "conclusion": "结论：3色28.4%最高（2色24.7%），4-6色仍25%+高位，7色后骤降　→　最优 3 色、封顶 6 色，推荐宽度 2-6 色",
+   "bottom": "黑、灰、白、宝蓝是站内外共认的 P0，先按 2-6 色铺开；军绿、深灰、浅灰按站内缺口定向补",
+   "visual": {
+    "title": "站外热门商品颜色",
+    "note": "站外报告按首选/备选取色；混色灰、宝蓝色为 P3，仅作差异化试色",
+    "items": [
+     {
+      "name": "黑色 Black",
+      "tag": "可复",
+      "color": "111111"
+     },
+     {
+      "name": "白色 White",
+      "tag": "可复",
+      "color": "FFFFFF"
+     },
+     {
+      "name": "灰色 Grey",
+      "tag": "可复",
+      "color": "8A8F96"
+     },
+     {
+      "name": "蓝色 Blue",
+      "tag": "可复",
+      "color": "1F4E9C"
+     },
+     {
+      "name": "混色灰 Heather Grey",
+      "tag": "试色",
+      "color": "linear-gradient(90deg, #6B7280 0.0%, #6B7280 20.0%), linear-gradient(90deg, #FFFFFF 20.0%, #FFFFFF 40.0%), linear-gradient(90deg, #B0B7C0 40.0%, #B0B7C0 60.0%), linear-gradient(90deg, #8A8F98 60.0%, #8A8F98 80.0%), linear-gradient(90deg, #D5D9DE 80.0%, #D5D9DE 100.0%)"
+     },
+     {
+      "name": "宝蓝色 Royal Blue",
+      "tag": "试色",
+      "color": "1E3A8A"
+     }
+    ]
+   },
+   "add": {
+    "title": "站内供给  加色（9 色）",
+    "expect": 9,
+    "items": [
+     {
+      "name": "黑色 Black",
+      "tag": "主推",
+      "color": "111111"
+     },
+     {
+      "name": "灰色 Grey",
+      "tag": "主推",
+      "color": "8A8F96"
+     },
+     {
+      "name": "军绿色 Army Green",
+      "tag": "主推",
+      "color": "4B5320"
+     },
+     {
+      "name": "深灰色 Dark Grey",
+      "tag": "主推",
+      "color": "555A60"
+     },
+     {
+      "name": "白色 White",
+      "tag": "主推",
+      "color": "FFFFFF"
+     },
+     {
+      "name": "浅灰色 Light Grey",
+      "tag": "主推",
+      "color": "D5D8DC"
+     },
+     {
+      "name": "红色 Red",
+      "tag": "随推",
+      "color": "C8102E"
+     },
+     {
+      "name": "天蓝色 Sky Blue",
+      "tag": "随推",
+      "color": "6EAFE1"
+     },
+     {
+      "name": "宝蓝色 Royal Blue",
+      "tag": "随推",
+      "color": "1E3A8A"
+     }
+    ]
+   },
+   "drop": {
+    "title": "站内供给  汰换（10 色）",
+    "expect": 10,
+    "items": [
+     {
+      "name": "混合色 Mixed Color",
+      "tag": "回收",
+      "color": "linear-gradient(90deg, #6B7280 0.0%, #6B7280 20.0%), linear-gradient(90deg, #FFFFFF 20.0%, #FFFFFF 40.0%), linear-gradient(90deg, #B0B7C0 40.0%, #B0B7C0 60.0%), linear-gradient(90deg, #8A8F98 60.0%, #8A8F98 80.0%), linear-gradient(90deg, #D5D9DE 80.0%, #D5D9DE 100.0%)"
+     },
+     {
+      "name": "混色 Variegation",
+      "tag": "减SKC",
+      "color": "linear-gradient(90deg, #6B7280 0.0%, #6B7280 20.0%), linear-gradient(90deg, #FFFFFF 20.0%, #FFFFFF 40.0%), linear-gradient(90deg, #B0B7C0 40.0%, #B0B7C0 60.0%), linear-gradient(90deg, #8A8F98 60.0%, #8A8F98 80.0%), linear-gradient(90deg, #D5D9DE 80.0%, #D5D9DE 100.0%)"
+     },
+     {
+      "name": "杏色 Apricot",
+      "tag": "减SKC",
+      "color": "F2C6A0"
+     },
+     {
+      "name": "咖啡色 Coffee",
+      "tag": "停加色",
+      "color": "5A3E2D"
+     },
+     {
+      "name": "深绿色 Dark Green",
+      "tag": "停加色",
+      "color": "1B4D3E"
+     },
+     {
+      "name": "绿色 Green",
+      "tag": "停加色",
+      "color": "2E7D32"
+     },
+     {
+      "name": "棕色 Brown",
+      "tag": "停加色",
+      "color": "6E4B32"
+     },
+     {
+      "name": "卡其 Khaki",
+      "tag": "停加色",
+      "color": "C3B091"
+     },
+     {
+      "name": "酒红色 Claret Red",
+      "tag": "停加色",
+      "color": "7F1734"
+     },
+     {
+      "name": "黄色 Yellow",
+      "tag": "停加色",
+      "color": "F0C828"
+     }
+    ]
+   }
+  },
+  {
+   "slide": 3,
+   "table": [
+    [
+     "一级品类",
+     "优先级",
+     "商品上架时间范围",
+     "推荐加色商品类型",
+     "近15天日均销量门槛",
+     "推荐skc宽度",
+     "推荐加色"
+    ],
+    [
+     "家居服",
+     "P0",
+     "近7天",
+     "7天内上架热卖款",
+     "4",
+     "2-3",
+     "P0：灰色Grey 蓝色Blue 绿色Green"
+    ],
+    [
+     "",
+     "P1",
+     "近8-30天",
+     "8-30天内上架热卖款",
+     "4",
+     "",
+     "P1：混合色Mixed Color 银灰色Silvery Grey 浅灰色Light Grey 酒红色Claret Red 卡其Khaki 深灰色Dark Grey 深绿色Dark Green"
+    ],
+    [
+     "",
+     "P2",
+     "近31天-90天",
+     "31天-90天内上架热卖款",
+     "9",
+     "",
+     ""
+    ],
+    [
+     "",
+     "P3",
+     "T365 ±60",
+     "去年同期上架，去年同期热卖",
+     "9",
+     "",
+     ""
+    ],
+    [
+     "",
+     "P4",
+     "近90-305天",
+     "非应季长青款",
+     "9",
+     "",
+     "P2：灰蓝色Dusty Blue 栗色Maroon"
+    ],
+    [
+     "",
+     "P5",
+     "近730天",
+     "上架时间超1年近期热卖款",
+     "20",
+     "",
+     ""
+    ]
+   ],
+   "pic": [
+    0.45,
+    3.98,
+    4.3,
+    2.3
+   ],
+   "group": "男内",
+   "cat": "家居服",
+   "pageno": "03",
+   "subtitle": "选色指南按上架时间对号，边际定色数，清单定具体颜色；清单已剔除本品类汰换色",
+   "conclusion": "结论：2色14.9%最高，3色10.8%回落，4色+<10%　→　最优 2 色、封顶 3 色，推荐宽度 2-3 色",
+   "bottom": "灰、蓝、绿是共认色，先用 2-3 色打底；银灰、浅灰、酒红按站内缺口补，混色做主推　",
+   "visual": {
+    "title": "站外热门商品颜色",
+    "note": "黑色、藏蓝已被本品类判汰换，仅作对照；灰、蓝、绿与站内重合，构成 P0",
+    "items": [
+     {
+      "name": "灰色 Grey",
+      "tag": "可复",
+      "color": "8A8F96"
+     },
+     {
+      "name": "蓝色 Blue",
+      "tag": "可复",
+      "color": "1F4E9C"
+     },
+     {
+      "name": "绿色 Green",
+      "tag": "可复",
+      "color": "2E7D32"
+     },
+     {
+      "name": "灰蓝色 Dusty Blue",
+      "tag": "试色",
+      "color": "96A3B4"
+     },
+     {
+      "name": "栗色 Maroon",
+      "tag": "试色",
+      "color": "800000"
+     },
+     {
+      "name": "黑色 Black",
+      "tag": "已汰换",
+      "color": "111111"
+     },
+     {
+      "name": "藏蓝色 Navy Blue",
+      "tag": "已汰换",
+      "color": "1B2A49"
+     }
+    ]
+   },
+   "add": {
+    "title": "站内供给  加色（10 色）",
+    "expect": 10,
+    "items": [
+     {
+      "name": "混合色 Mixed Color",
+      "tag": "主推",
+      "color": "linear-gradient(90deg, #6B7280 0.0%, #6B7280 20.0%), linear-gradient(90deg, #FFFFFF 20.0%, #FFFFFF 40.0%), linear-gradient(90deg, #B0B7C0 40.0%, #B0B7C0 60.0%), linear-gradient(90deg, #8A8F98 60.0%, #8A8F98 80.0%), linear-gradient(90deg, #D5D9DE 80.0%, #D5D9DE 100.0%)"
+     },
+     {
+      "name": "银灰色 Silvery Grey",
+      "tag": "定向",
+      "color": "C0C4C9"
+     },
+     {
+      "name": "浅灰色 Light Grey",
+      "tag": "定向",
+      "color": "D5D8DC"
+     },
+     {
+      "name": "酒红色 Claret Red",
+      "tag": "定向",
+      "color": "7F1734"
+     },
+     {
+      "name": "卡其 Khaki",
+      "tag": "随推",
+      "color": "C3B091"
+     },
+     {
+      "name": "灰色 Grey",
+      "tag": "随推",
+      "color": "8A8F96"
+     },
+     {
+      "name": "蓝色 Blue",
+      "tag": "随推",
+      "color": "1F4E9C"
+     },
+     {
+      "name": "深灰色 Dark Grey",
+      "tag": "随推",
+      "color": "555A60"
+     },
+     {
+      "name": "绿色 Green",
+      "tag": "随推",
+      "color": "2E7D32"
+     },
+     {
+      "name": "深绿色 Dark Green",
+      "tag": "随推",
+      "color": "1B4D3E"
+     }
+    ]
+   },
+   "drop": {
+    "title": "站内供给  汰换（10 色）",
+    "expect": 10,
+    "items": [
+     {
+      "name": "白色 White",
+      "tag": "回收",
+      "color": "FFFFFF"
+     },
+     {
+      "name": "黑色 Black",
+      "tag": "减SKC",
+      "color": "111111"
+     },
+     {
+      "name": "藏蓝色 Navy Blue",
+      "tag": "减SKC",
+      "color": "1B2A49"
+     },
+     {
+      "name": "红色 Red",
+      "tag": "减SKC",
+      "color": "C8102E"
+     },
+     {
+      "name": "混色 Variegation",
+      "tag": "减SKC",
+      "color": "linear-gradient(90deg, #6B7280 0.0%, #6B7280 20.0%), linear-gradient(90deg, #FFFFFF 20.0%, #FFFFFF 40.0%), linear-gradient(90deg, #B0B7C0 40.0%, #B0B7C0 60.0%), linear-gradient(90deg, #8A8F98 60.0%, #8A8F98 80.0%), linear-gradient(90deg, #D5D9DE 80.0%, #D5D9DE 100.0%)"
+     },
+     {
+      "name": "杏色 Apricot",
+      "tag": "停加色",
+      "color": "F2C6A0"
+     },
+     {
+      "name": "宝蓝色 Royal Blue",
+      "tag": "停加色",
+      "color": "1E3A8A"
+     },
+     {
+      "name": "橙色 Orange",
+      "tag": "停加色",
+      "color": "F26B21"
+     },
+     {
+      "name": "军绿色 Army Green",
+      "tag": "停加色",
+      "color": "4B5320"
+     },
+     {
+      "name": "玫红色 Fuchsia",
+      "tag": "停加色",
+      "color": "C2185B"
+     }
+    ]
+   }
+  },
+  {
+   "slide": 4,
+   "table": [
+    [
+     "一级品类",
+     "优先级",
+     "商品上架时间范围",
+     "推荐加色商品类型",
+     "近15天日均销量门槛",
+     "推荐skc宽度",
+     "推荐加色"
+    ],
+    [
+     "内裤",
+     "P0",
+     "近7天",
+     "7天内上架热卖款",
+     "6",
+     "4-7",
+     "P0：黑色Black"
+    ],
+    [
+     "",
+     "P1",
+     "近8-30天",
+     "8-30天内上架热卖款",
+     "6",
+     "",
+     "P1：混合色Mixed Color 藏蓝色Navy Blue 天蓝色Sky Blue 红色Red 深灰色Dark Grey 白色White 蓝色Blue 宝蓝色Royal Blue 灰色Grey"
+    ],
+    [
+     "",
+     "P2",
+     "近31天-90天",
+     "31天-90天内上架热卖款",
+     "14",
+     "",
+     ""
+    ],
+    [
+     "",
+     "P3",
+     "T365 ±60",
+     "去年同期上架，去年同期热卖",
+     "14",
+     "",
+     ""
+    ],
+    [
+     "",
+     "P4",
+     "近90-305天",
+     "非应季长青款",
+     "14",
+     "",
+     "P2：多色Multicolor"
+    ],
+    [
+     "",
+     "P5",
+     "近730天",
+     "上架时间超1年近期热卖款",
+     "28",
+     "",
+     ""
+    ]
+   ],
+   "pic": [
+    0.45,
+    3.98,
+    4.36,
+    2.14
+   ],
+   "group": "男内",
+   "cat": "内裤",
+   "pageno": "04",
+   "subtitle": "选色指南按上架时间对号，边际定色数，清单定具体颜色；清单已剔除本品类汰换色",
+   "conclusion": "结论：峰值5色14.9%，7色+仅5.8%　→　最优 5 色、封顶 7 色，推荐宽度 4-7 色",
+   "bottom": "黑色站内外共认，先复；混色、藏蓝、天蓝、深灰按站内缺口补，宽度 4-7 色",
+   "visual": {
+    "title": "站外热门商品颜色",
+    "note": "站外报告只给出首选、备选两色：黑色进 P0，多色为备选色，作差异化试色",
+    "items": [
+     {
+      "name": "黑色 Black",
+      "tag": "可复",
+      "color": "111111"
+     },
+     {
+      "name": "多色 Multicolor",
+      "tag": "可复",
+      "color": "linear-gradient(90deg, #6B7280 0.0%, #6B7280 20.0%), linear-gradient(90deg, #FFFFFF 20.0%, #FFFFFF 40.0%), linear-gradient(90deg, #B0B7C0 40.0%, #B0B7C0 60.0%), linear-gradient(90deg, #8A8F98 60.0%, #8A8F98 80.0%), linear-gradient(90deg, #D5D9DE 80.0%, #D5D9DE 100.0%)"
+     }
+    ]
+   },
+   "add": {
+    "title": "站内供给  加色（10 色）",
+    "expect": 10,
+    "items": [
+     {
+      "name": "混合色 Mixed Color",
+      "tag": "主推",
+      "color": "linear-gradient(90deg, #6B7280 0.0%, #6B7280 20.0%), linear-gradient(90deg, #FFFFFF 20.0%, #FFFFFF 40.0%), linear-gradient(90deg, #B0B7C0 40.0%, #B0B7C0 60.0%), linear-gradient(90deg, #8A8F98 60.0%, #8A8F98 80.0%), linear-gradient(90deg, #D5D9DE 80.0%, #D5D9DE 100.0%)"
+     },
+     {
+      "name": "黑色 Black",
+      "tag": "主推",
+      "color": "111111"
+     },
+     {
+      "name": "藏蓝色 Navy Blue",
+      "tag": "定向",
+      "color": "1B2A49"
+     },
+     {
+      "name": "天蓝色 Sky Blue",
+      "tag": "定向",
+      "color": "6EAFE1"
+     },
+     {
+      "name": "红色 Red",
+      "tag": "定向",
+      "color": "C8102E"
+     },
+     {
+      "name": "深灰色 Dark Grey",
+      "tag": "定向",
+      "color": "555A60"
+     },
+     {
+      "name": "白色 White",
+      "tag": "随推",
+      "color": "FFFFFF"
+     },
+     {
+      "name": "蓝色 Blue",
+      "tag": "随推",
+      "color": "1F4E9C"
+     },
+     {
+      "name": "宝蓝色 Royal Blue",
+      "tag": "随推",
+      "color": "1E3A8A"
+     },
+     {
+      "name": "灰色 Grey",
+      "tag": "随推",
+      "color": "8A8F96"
+     }
+    ]
+   },
+   "drop": {
+    "title": "站内供给  汰换（10 色）",
+    "expect": 10,
+    "items": [
+     {
+      "name": "混色 Variegation",
+      "tag": "回收",
+      "color": "linear-gradient(90deg, #6B7280 0.0%, #6B7280 20.0%), linear-gradient(90deg, #FFFFFF 20.0%, #FFFFFF 40.0%), linear-gradient(90deg, #B0B7C0 40.0%, #B0B7C0 60.0%), linear-gradient(90deg, #8A8F98 60.0%, #8A8F98 80.0%), linear-gradient(90deg, #D5D9DE 80.0%, #D5D9DE 100.0%)"
+     },
+     {
+      "name": "紫色 Purple",
+      "tag": "减SKC",
+      "color": "7E3F98"
+     },
+     {
+      "name": "柠檬黄 Lemon Yellow",
+      "tag": "停加色",
+      "color": "F0E15A"
+     },
+     {
+      "name": "深紫色 Deep Violet",
+      "tag": "停加色",
+      "color": "4A236E"
+     },
+     {
+      "name": "黄色 Yellow",
+      "tag": "停加色",
+      "color": "F0C828"
+     },
+     {
+      "name": "翡翠绿 Emerald Green",
+      "tag": "停加色",
+      "color": "009B77"
+     },
+     {
+      "name": "砖红色 Brick Red",
+      "tag": "停加色",
+      "color": "963C2D"
+     },
+     {
+      "name": "深青色 Dark Cyan",
+      "tag": "停加色",
+      "color": "006E78"
+     },
+     {
+      "name": "太空灰 Space Gray",
+      "tag": "停加色",
+      "color": "6E737D"
+     },
+     {
+      "name": "湖蓝色 Lake Blue",
+      "tag": "停加色",
+      "color": "378CB4"
+     }
+    ]
+   }
+  },
+  {
+   "slide": 5,
+   "table": [
+    [
+     "一级品类",
+     "优先级",
+     "商品上架时间范围",
+     "推荐加色商品类型",
+     "近15天日均销量门槛",
+     "推荐skc宽度",
+     "推荐加色"
+    ],
+    [
+     "情趣",
+     "P0",
+     "近7天",
+     "7天内上架热卖款",
+     "4",
+     "2-4",
+     "P0：黑色Black 白色White 绿色Green"
+    ],
+    [
+     "",
+     "P1",
+     "近8-30天",
+     "8-30天内上架热卖款",
+     "4",
+     "",
+     "P1：深紫色Deep Violet 荧光绿Fluorescent Green 浅黄绿色Greenish Yellow 黄绿色Yellow-green 孔雀蓝Peacock Blue 玫红色Fuchsia 杏色Apricot"
+    ],
+    [
+     "",
+     "P2",
+     "近31天-90天",
+     "31天-90天内上架热卖款",
+     "6",
+     "",
+     ""
+    ],
+    [
+     "",
+     "P3",
+     "T365 ±60",
+     "去年同期上架，去年同期热卖",
+     "6",
+     "",
+     ""
+    ],
+    [
+     "",
+     "P4",
+     "近90-305天",
+     "非应季长青款",
+     "6",
+     "",
+     "P2：粉色Pink 藏蓝色Navy Blue 宝蓝色Royal Blue"
+    ],
+    [
+     "",
+     "P5",
+     "近730天",
+     "上架时间超1年近期热卖款",
+     "11",
+     "",
+     ""
+    ]
+   ],
+   "pic": [
+    0.45,
+    3.98,
+    4.07,
+    2.3
+   ],
+   "group": "男内",
+   "cat": "情趣",
+   "pageno": "05",
+   "subtitle": "选色指南按上架时间对号，边际定色数，清单定具体颜色；清单已剔除本品类汰换色",
+   "conclusion": "结论：4色33.3%最高，4色+无爆款出现　→　最优 4 色、封顶 4 色，推荐宽度 2-4 色",
+   "bottom": "黑、白是共认色，先复 2-4 色；深紫、荧光绿、孔雀蓝按缺口补样本少，先加色观察",
+   "visual": {
+    "title": "站外热门商品颜色",
+    "note": "黄色已被本品类判汰换，仅作对照；黑白为 P1 首选、备选",
+    "items": [
+     {
+      "name": "黑色 Black",
+      "tag": "可复",
+      "color": "111111"
+     },
+     {
+      "name": "白色 White",
+      "tag": "可复",
+      "color": "FFFFFF"
+     },
+     {
+      "name": "绿色 Green",
+      "tag": "可复",
+      "color": "2E7D32"
+     },
+     {
+      "name": "粉色 Pink",
+      "tag": "可复",
+      "color": "F4B4C4"
+     },
+     {
+      "name": "藏蓝色 Navy Blue",
+      "tag": "试色",
+      "color": "1B2A49"
+     },
+     {
+      "name": "宝蓝色 Royal Blue",
+      "tag": "试色",
+      "color": "1E3A8A"
+     },
+     {
+      "name": "黄色 Yellow",
+      "tag": "已汰换",
+      "color": "F0C828"
+     }
+    ]
+   },
+   "add": {
+    "title": "站内供给  加色（10 色）",
+    "expect": 10,
+    "items": [
+     {
+      "name": "黑色 Black",
+      "tag": "主推",
+      "color": "111111"
+     },
+     {
+      "name": "白色 White",
+      "tag": "主推",
+      "color": "FFFFFF"
+     },
+     {
+      "name": "绿色 Green",
+      "tag": "定向",
+      "color": "2E7D32"
+     },
+     {
+      "name": "深紫色 Deep Violet",
+      "tag": "定向",
+      "color": "4A236E"
+     },
+     {
+      "name": "荧光绿 Fluorescent Green",
+      "tag": "定向",
+      "color": "39E114"
+     },
+     {
+      "name": "浅黄绿色 Greenish Yellow",
+      "tag": "定向",
+      "color": "C8DC5A"
+     },
+     {
+      "name": "孔雀蓝 Peacock Blue",
+      "tag": "定向",
+      "color": "00718B"
+     },
+     {
+      "name": "黄绿色 Yellow-green",
+      "tag": "定向",
+      "color": "9ACD32"
+     },
+     {
+      "name": "玫红色 Fuchsia",
+      "tag": "定向",
+      "color": "C2185B"
+     },
+     {
+      "name": "杏色 Apricot",
+      "tag": "随推",
+      "color": "F2C6A0"
+     }
+    ]
+   },
+   "drop": {
+    "title": "站内供给  汰换（10 色）",
+    "expect": 10,
+    "items": [
+     {
+      "name": "混合色 Mixed Color",
+      "tag": "回收",
+      "color": "linear-gradient(90deg, #6B7280 0.0%, #6B7280 20.0%), linear-gradient(90deg, #FFFFFF 20.0%, #FFFFFF 40.0%), linear-gradient(90deg, #B0B7C0 40.0%, #B0B7C0 60.0%), linear-gradient(90deg, #8A8F98 60.0%, #8A8F98 80.0%), linear-gradient(90deg, #D5D9DE 80.0%, #D5D9DE 100.0%)"
+     },
+     {
+      "name": "红色 Red",
+      "tag": "减SKC",
+      "color": "C8102E"
+     },
+     {
+      "name": "紫色 Purple",
+      "tag": "停加色",
+      "color": "7E3F98"
+     },
+     {
+      "name": "粉红色 Pink Red",
+      "tag": "停加色",
+      "color": "E6788C"
+     },
+     {
+      "name": "混色 Variegation",
+      "tag": "停加色",
+      "color": "linear-gradient(90deg, #6B7280 0.0%, #6B7280 20.0%), linear-gradient(90deg, #FFFFFF 20.0%, #FFFFFF 40.0%), linear-gradient(90deg, #B0B7C0 40.0%, #B0B7C0 60.0%), linear-gradient(90deg, #8A8F98 60.0%, #8A8F98 80.0%), linear-gradient(90deg, #D5D9DE 80.0%, #D5D9DE 100.0%)"
+     },
+     {
+      "name": "黄色 Yellow",
+      "tag": "停加色",
+      "color": "F0C828"
+     },
+     {
+      "name": "肤色 Skin Tone",
+      "tag": "停加色",
+      "color": "E8BEA0"
+     },
+     {
+      "name": "咖啡色 Coffee",
+      "tag": "停加色",
+      "color": "5A3E2D"
+     },
+     {
+      "name": "卡其 Khaki",
+      "tag": "停加色",
+      "color": "C3B091"
+     },
+     {
+      "name": "浅灰色 Light Grey",
+      "tag": "停加色",
+      "color": "D5D8DC"
+     }
+    ]
+   }
+  },
+  {
+   "slide": 6,
+   "table": [
+    [
+     "一级品类",
+     "优先级",
+     "商品上架时间范围",
+     "推荐加色商品类型",
+     "近15天日均销量门槛",
+     "推荐skc宽度",
+     "推荐加色"
+    ],
+    [
+     "打底压缩",
+     "P0",
+     "近7天",
+     "7天内上架热卖款",
+     "11",
+     "2+",
+     "P0：黑色Black"
+    ],
+    [
+     "",
+     "P1",
+     "近8-30天",
+     "8-30天内上架热卖款",
+     "11",
+     "",
+     "P1：绿色Green 灰色Grey 姜黄色Turmeric 土黄色Earth-Yellow 浅蓝色Light Blue 浅紫色LightPurple 藏蓝色Navy Blue"
+    ],
+    [
+     "",
+     "P2",
+     "近31天-90天",
+     "31天-90天内上架热卖款",
+     "22",
+     "",
+     ""
+    ],
+    [
+     "",
+     "P3",
+     "T365 ±60",
+     "去年同期上架，去年同期热卖",
+     "22",
+     "",
+     ""
+    ],
+    [
+     "",
+     "P4",
+     "近90-305天",
+     "非应季长青款",
+     "22",
+     "",
+     "P2：卡其Khaki 棕色Brown 杏色Apricot 香槟色Champagne"
+    ],
+    [
+     "",
+     "P5",
+     "近730天",
+     "上架时间超1年近期热卖款",
+     "44",
+     "",
+     ""
+    ]
+   ],
+   "pic": [
+    0.45,
+    3.98,
+    4.26,
+    2.3
+   ],
+   "group": "男内",
+   "cat": "打底压缩",
+   "pageno": "06",
+   "subtitle": "选色指南按上架时间对号，边际定色数，清单定具体颜色；清单已剔除本品类汰换色",
+   "conclusion": "结论：仅0-1两档，1色34.4%最高　→　最优 1 色、封顶 1 色，样本仅 0-1 两档，推荐宽度 2+ 色",
+   "bottom": "黑色是唯一共认色，先复；绿、灰、姜黄。按缺口补样本少，先加色观察",
+   "visual": {
+    "title": "站外热门商品颜色",
+    "note": "站外热门商品颜色",
+    "items": [
+     {
+      "name": "黑色 Black",
+      "tag": "可复",
+      "color": "111111"
+     },
+     {
+      "name": "卡其 Khaki",
+      "tag": "可复",
+      "color": "C3B091"
+     },
+     {
+      "name": "棕色 Brown",
+      "tag": "可复",
+      "color": "6E4B32"
+     },
+     {
+      "name": "杏色 Apricot",
+      "tag": "试色",
+      "color": "F2C6A0"
+     },
+     {
+      "name": "香槟色 Champagne",
+      "tag": "试色",
+      "color": "E8D0AA"
+     },
+     {
+      "name": "白色 White",
+      "tag": "已汰换",
+      "color": "FFFFFF"
+     },
+     {
+      "name": "蓝色 Blue",
+      "tag": "已汰换",
+      "color": "1F4E9C"
+     }
+    ]
+   },
+   "add": {
+    "title": "站内供给  加色（8 色）",
+    "expect": 8,
+    "items": [
+     {
+      "name": "黑色 Black",
+      "tag": "主推",
+      "color": "111111"
+     },
+     {
+      "name": "绿色 Green",
+      "tag": "定向",
+      "color": "2E7D32"
+     },
+     {
+      "name": "灰色 Grey",
+      "tag": "定向",
+      "color": "8A8F96"
+     },
+     {
+      "name": "姜黄色 Turmeric",
+      "tag": "定向",
+      "color": "C89614"
+     },
+     {
+      "name": "土黄色 Earth-Yellow",
+      "tag": "定向",
+      "color": "AA823C"
+     },
+     {
+      "name": "浅蓝色 Light Blue",
+      "tag": "定向",
+      "color": "A8CDEB"
+     },
+     {
+      "name": "浅紫色 Light Purple",
+      "tag": "随推",
+      "color": "C4AAD7"
+     },
+     {
+      "name": "藏蓝色 Navy Blue",
+      "tag": "随推",
+      "color": "1B2A49"
+     }
+    ]
+   },
+   "drop": {
+    "title": "站内供给  汰换（10 色）",
+    "expect": 10,
+    "items": [
+     {
+      "name": "混色 Variegation",
+      "tag": "回收",
+      "color": "linear-gradient(90deg, #6B7280 0.0%, #6B7280 20.0%), linear-gradient(90deg, #FFFFFF 20.0%, #FFFFFF 40.0%), linear-gradient(90deg, #B0B7C0 40.0%, #B0B7C0 60.0%), linear-gradient(90deg, #8A8F98 60.0%, #8A8F98 80.0%), linear-gradient(90deg, #D5D9DE 80.0%, #D5D9DE 100.0%)"
+     },
+     {
+      "name": "混合色 Mixed Color",
+      "tag": "减SKC",
+      "color": "linear-gradient(90deg, #6B7280 0.0%, #6B7280 20.0%), linear-gradient(90deg, #FFFFFF 20.0%, #FFFFFF 40.0%), linear-gradient(90deg, #B0B7C0 40.0%, #B0B7C0 60.0%), linear-gradient(90deg, #8A8F98 60.0%, #8A8F98 80.0%), linear-gradient(90deg, #D5D9DE 80.0%, #D5D9DE 100.0%)"
+     },
+     {
+      "name": "蓝色 Blue",
+      "tag": "减SKC",
+      "color": "1F4E9C"
+     },
+     {
+      "name": "白色 White",
+      "tag": "减SKC",
+      "color": "FFFFFF"
+     },
+     {
+      "name": "红色 Red",
+      "tag": "减SKC",
+      "color": "C8102E"
+     },
+     {
+      "name": "粉红色 Pink Red",
+      "tag": "停加色",
+      "color": "E6788C"
+     },
+     {
+      "name": "紫色 Purple",
+      "tag": "停加色",
+      "color": "7E3F98"
+     },
+     {
+      "name": "橙色 Orange",
+      "tag": "停加色",
+      "color": "F26B21"
+     },
+     {
+      "name": "肤色 Skin Tone",
+      "tag": "停加色",
+      "color": "E8BEA0"
+     },
+     {
+      "name": "荧光绿 Fluorescent Green",
+      "tag": "停加色",
+      "color": "39E114"
+     }
+    ]
+   }
+  },
+  {
+   "slide": 7,
+   "table": [
+    [
+     "一级品类",
+     "优先级",
+     "商品上架时间范围",
+     "推荐加色商品类型",
+     "近15天日均销量门槛",
+     "推荐skc宽度",
+     "推荐加色"
+    ],
+    [
+     "背心上衣",
+     "P0",
+     "近7天",
+     "7天内上架热卖款",
+     "9",
+     "3-6",
+     "P0：黑色Black"
+    ],
+    [
+     "",
+     "P1",
+     "近8-30天",
+     "8-30天内上架热卖款",
+     "9",
+     "",
+     "P1：胭脂红Rouge 海洋蓝SeaBlue 深青色DarkCyan 深红色DarkRed 粉蓝色PowderBlue 橄榄绿OliveGreen 卡其Khaki 咖啡色Coffee 藏蓝色NavyBlue"
+    ],
+    [
+     "",
+     "P2",
+     "近31天-90天",
+     "31天-90天内上架热卖款",
+     "22",
+     "",
+     ""
+    ],
+    [
+     "",
+     "P3",
+     "T365 ±60",
+     "去年同期上架，去年同期热卖",
+     "22",
+     "",
+     ""
+    ],
+    [
+     "",
+     "P4",
+     "近90-305天",
+     "非应季长青款",
+     "22",
+     "",
+     "P2：粉色Pink 蓝色Blue 浅灰色Light Grey"
+    ],
+    [
+     "",
+     "P5",
+     "近730天",
+     "上架时间超1年近期热卖款",
+     "49",
+     "",
+     ""
+    ]
+   ],
+   "pic": [
+    0.45,
+    3.98,
+    4.36,
+    2.27
+   ],
+   "group": "男内",
+   "cat": "背心上衣",
+   "pageno": "07",
+   "subtitle": "选色指南按上架时间对号，边际定色数，清单定具体颜色；清单已剔除本品类汰换色",
+   "conclusion": "结论：6色12.5%最高6色+无爆款出现　→　最优 6 色、封顶 6 色，推荐宽度 3-6 色",
+   "bottom": "黑色站内外共认，优先复；胭脂红、海洋蓝、深青按缺口补，宽度 3-6 色　",
+   "visual": {
+    "title": "站外热门商品颜色",
+    "note": "白、红、深灰已被本品类判汰换，仅作对照；黑色为 P1 首选",
+    "items": [
+     {
+      "name": "黑色 Black",
+      "tag": "可复",
+      "color": "111111"
+     },
+     {
+      "name": "粉色 Pink",
+      "tag": "可复",
+      "color": "F4B4C4"
+     },
+     {
+      "name": "蓝色 Blue",
+      "tag": "可复",
+      "color": "1F4E9C"
+     },
+     {
+      "name": "浅灰色 Light Grey",
+      "tag": "试色",
+      "color": "D5D8DC"
+     },
+     {
+      "name": "白色 White",
+      "tag": "已汰换",
+      "color": "FFFFFF"
+     },
+     {
+      "name": "红色 Red",
+      "tag": "已汰换",
+      "color": "C8102E"
+     },
+     {
+      "name": "深灰色 Dark Grey",
+      "tag": "已汰换",
+      "color": "555A60"
+     }
+    ]
+   },
+   "add": {
+    "title": "站内供给  加色（10 色）",
+    "expect": 10,
+    "items": [
+     {
+      "name": "黑色 Black",
+      "tag": "主推",
+      "color": "111111"
+     },
+     {
+      "name": "胭脂红 Rouge",
+      "tag": "定向",
+      "color": "BE3C50"
+     },
+     {
+      "name": "海洋蓝 Sea Blue",
+      "tag": "定向",
+      "color": "006994"
+     },
+     {
+      "name": "深青色 Dark Cyan",
+      "tag": "定向",
+      "color": "006E78"
+     },
+     {
+      "name": "深红色 Dark Red",
+      "tag": "定向",
+      "color": "8B0000"
+     },
+     {
+      "name": "粉蓝色 Powder Blue",
+      "tag": "定向",
+      "color": "BCD6EB"
+     },
+     {
+      "name": "橄榄绿 Olive Green",
+      "tag": "定向",
+      "color": "70803C"
+     },
+     {
+      "name": "卡其 Khaki",
+      "tag": "随推",
+      "color": "C3B091"
+     },
+     {
+      "name": "咖啡色 Coffee",
+      "tag": "随推",
+      "color": "5A3E2D"
+     },
+     {
+      "name": "藏蓝色 Navy Blue",
+      "tag": "随推",
+      "color": "1B2A49"
+     }
+    ]
+   },
+   "drop": {
+    "title": "站内供给  汰换（10 色）",
+    "expect": 10,
+    "items": [
+     {
+      "name": "混合色 Mixed Color",
+      "tag": "回收",
+      "color": "linear-gradient(90deg, #6B7280 0.0%, #6B7280 20.0%), linear-gradient(90deg, #FFFFFF 20.0%, #FFFFFF 40.0%), linear-gradient(90deg, #B0B7C0 40.0%, #B0B7C0 60.0%), linear-gradient(90deg, #8A8F98 60.0%, #8A8F98 80.0%), linear-gradient(90deg, #D5D9DE 80.0%, #D5D9DE 100.0%)"
+     },
+     {
+      "name": "深灰色 Dark Grey",
+      "tag": "减SKC",
+      "color": "555A60"
+     },
+     {
+      "name": "红色 Red",
+      "tag": "减SKC",
+      "color": "C8102E"
+     },
+     {
+      "name": "深绿色 Dark Green",
+      "tag": "停加色",
+      "color": "1B4D3E"
+     },
+     {
+      "name": "浅蓝色 Light Blue",
+      "tag": "停加色",
+      "color": "A8CDEB"
+     },
+     {
+      "name": "橙色 Orange",
+      "tag": "停加色",
+      "color": "F26B21"
+     },
+     {
+      "name": "绿色 Green",
+      "tag": "停加色",
+      "color": "2E7D32"
+     },
+     {
+      "name": "杏色 Apricot",
+      "tag": "停加色",
+      "color": "F2C6A0"
+     },
+     {
+      "name": "白色 White",
+      "tag": "停加色",
+      "color": "FFFFFF"
+     },
+     {
+      "name": "浅紫色 Light Purple",
+      "tag": "停加色",
+      "color": "C4AAD7"
+     }
+    ]
+   }
+  },
+  {
+   "slide": 8,
+   "table": [
+    [
+     "一级品类",
+     "优先级",
+     "商品上架时间范围",
+     "推荐加色商品类型",
+     "近15天日均销量门槛",
+     "推荐skc宽度",
+     "推荐加色"
+    ],
+    [
+     "袜子",
+     "P0",
+     "近7天",
+     "7天内上架热卖款",
+     "8",
+     "2-3",
+     "P0：黑色Black"
+    ],
+    [
+     "",
+     "P1",
+     "近8-30天",
+     "8-30天内上架热卖款",
+     "8",
+     "",
+     "P1：白色White 深灰色DarkGrey 酒红色Claret Red 蓝色Blue 红色Red 藏蓝色Navy Blue 黄色Yellow 灰色Grey 浅灰色Light Grey"
+    ],
+    [
+     "",
+     "P2",
+     "近31天-90天",
+     "31天-90天内上架热卖款",
+     "18",
+     "",
+     ""
+    ],
+    [
+     "",
+     "P3",
+     "T365 ±60",
+     "去年同期上架，去年同期热卖",
+     "18",
+     "",
+     ""
+    ],
+    [
+     "",
+     "P4",
+     "近90-305天",
+     "非应季长青款",
+     "18",
+     "",
+     "P2：棕色Brown"
+    ],
+    [
+     "",
+     "P5",
+     "近730天",
+     "上架时间超1年近期热卖款",
+     "43",
+     "",
+     ""
+    ]
+   ],
+   "pic": [
+    0.45,
+    3.98,
+    4.36,
+    2.25
+   ],
+   "group": "男内",
+   "cat": "袜子",
+   "pageno": "08",
+   "subtitle": "选色指南按上架时间对号，边际定色数，清单定具体颜色；清单已剔除本品类汰换色",
+   "conclusion": "结论：3色25%最高0-1 SKC几乎涵盖男内袜子的全部类型，可能会影响最终判断　→　最优 3 色、封顶 3 色，推荐宽度 2-3 色",
+   "bottom": "黑色站内外共认，先复 2-3 色；白、深灰、酒红按缺口补样本少，先加色观察　",
+   "visual": {
+    "title": "站外热门商品颜色",
+    "note": "站外报告只给出首选、备选两色：黑色进 P0，棕色为备选色",
+    "items": [
+     {
+      "name": "黑色 Black",
+      "tag": "可复",
+      "color": "111111"
+     },
+     {
+      "name": "棕色 Brown",
+      "tag": "可复",
+      "color": "6E4B32"
+     }
+    ]
+   },
+   "add": {
+    "title": "站内供给  加色（10 色）",
+    "expect": 10,
+    "items": [
+     {
+      "name": "黑色 Black",
+      "tag": "主推",
+      "color": "111111"
+     },
+     {
+      "name": "白色 White",
+      "tag": "主推",
+      "color": "FFFFFF"
+     },
+     {
+      "name": "深灰色 Dark Grey",
+      "tag": "定向",
+      "color": "555A60"
+     },
+     {
+      "name": "酒红色 Claret Red",
+      "tag": "定向",
+      "color": "7F1734"
+     },
+     {
+      "name": "蓝色 Blue",
+      "tag": "定向",
+      "color": "1F4E9C"
+     },
+     {
+      "name": "红色 Red",
+      "tag": "定向",
+      "color": "C8102E"
+     },
+     {
+      "name": "藏蓝色 Navy Blue",
+      "tag": "定向",
+      "color": "1B2A49"
+     },
+     {
+      "name": "黄色 Yellow",
+      "tag": "定向",
+      "color": "F0C828"
+     },
+     {
+      "name": "灰色 Grey",
+      "tag": "随推",
+      "color": "8A8F96"
+     },
+     {
+      "name": "浅灰色 Light Grey",
+      "tag": "随推",
+      "color": "D5D8DC"
+     }
+    ]
+   },
+   "drop": {
+    "title": "站内供给  汰换（10 色）",
+    "expect": 10,
+    "items": [
+     {
+      "name": "混色 Variegation",
+      "tag": "回收",
+      "color": "linear-gradient(90deg, #6B7280 0.0%, #6B7280 20.0%), linear-gradient(90deg, #FFFFFF 20.0%, #FFFFFF 40.0%), linear-gradient(90deg, #B0B7C0 40.0%, #B0B7C0 60.0%), linear-gradient(90deg, #8A8F98 60.0%, #8A8F98 80.0%), linear-gradient(90deg, #D5D9DE 80.0%, #D5D9DE 100.0%)"
+     },
+     {
+      "name": "浅紫色 Light Purple",
+      "tag": "减SKC",
+      "color": "C4AAD7"
+     },
+     {
+      "name": "浅黄色 Light Yellow",
+      "tag": "停加色",
+      "color": "F5EB96"
+     },
+     {
+      "name": "混合色 Mixed Color",
+      "tag": "停加色",
+      "color": "linear-gradient(90deg, #6B7280 0.0%, #6B7280 20.0%), linear-gradient(90deg, #FFFFFF 20.0%, #FFFFFF 40.0%), linear-gradient(90deg, #B0B7C0 40.0%, #B0B7C0 60.0%), linear-gradient(90deg, #8A8F98 60.0%, #8A8F98 80.0%), linear-gradient(90deg, #D5D9DE 80.0%, #D5D9DE 100.0%)"
+     },
+     {
+      "name": "浅绿色 Light Green",
+      "tag": "停加色",
+      "color": "96C88C"
+     },
+     {
+      "name": "浅棕色 Light Brown",
+      "tag": "停加色",
+      "color": "AA8C6E"
+     },
+     {
+      "name": "深棕色 Dark Brown",
+      "tag": "停加色",
+      "color": "503726"
+     },
+     {
+      "name": "孔雀蓝 Peacock Blue",
+      "tag": "停加色",
+      "color": "00718B"
+     },
+     {
+      "name": "亮钢蓝 Bright Steel Blue",
+      "tag": "停加色",
+      "color": "4682B4"
+     },
+     {
+      "name": "青色 Cyan",
+      "tag": "停加色",
+      "color": "00AFBE"
+     }
+    ]
+   }
+  },
+  {
+   "slide": 9,
+   "table": [
+    [
+     "一级品类",
+     "优先级",
+     "商品上架时间范围",
+     "推荐加色商品类型",
+     "近15天日均销量门槛",
+     "推荐skc宽度",
+     "推荐加色"
+    ],
+    [
+     "塑形衣",
+     "P0",
+     "近7天",
+     "7天内上架热卖款",
+     "9",
+     "2-6",
+     "P0：黑色Black 白色White 杏色Apricot 蓝色Blue"
+    ],
+    [
+     "",
+     "P1",
+     "近8-30天",
+     "8-30天内上架热卖款",
+     "9",
+     "",
+     "P1：灰色Grey 银灰色Silvery Grey 深灰色Dark Grey 肤色SkinTone 铅灰色LeadColor 混色Variegation"
+    ],
+    [
+     "",
+     "P2",
+     "近31天-90天",
+     "31天-90天内上架热卖款",
+     "18",
+     "",
+     ""
+    ],
+    [
+     "",
+     "P3",
+     "T365 ±60",
+     "去年同期上架，去年同期热卖",
+     "18",
+     "",
+     ""
+    ],
+    [
+     "",
+     "P4",
+     "近90-305天",
+     "非应季长青款",
+     "18",
+     "",
+     "P2：卡其Khaki 棕色Brown 香槟色Champagne"
+    ],
+    [
+     "",
+     "P5",
+     "近730天",
+     "上架时间超1年近期热卖款",
+     "40",
+     "",
+     ""
+    ]
+   ],
+   "pic": [
+    0.45,
+    3.98,
+    4.31,
+    2.3
+   ],
+   "group": "男内",
+   "cat": "塑形衣",
+   "pageno": "09",
+   "subtitle": "选色指南按上架时间对号，边际定色数，清单定具体颜色；清单已剔除本品类汰换色",
+   "conclusion": "结论：3色37.9%最高　→　最优 3 色、封顶 6 色，推荐宽度 2-6 色",
+   "bottom": "黑、白是共认色，先复 2-6 色；灰、银灰、肤色按缺口补",
+   "visual": {
+    "title": "站外热门商品颜色",
+    "note": "站外热门商品颜色",
+    "items": [
+     {
+      "name": "黑色 Black",
+      "tag": "可复",
+      "color": "111111"
+     },
+     {
+      "name": "白色 White",
+      "tag": "可复",
+      "color": "FFFFFF"
+     },
+     {
+      "name": "卡其 Khaki",
+      "tag": "可复",
+      "color": "C3B091"
+     },
+     {
+      "name": "蓝色 Blue",
+      "tag": "可复",
+      "color": "1F4E9C"
+     },
+     {
+      "name": "棕色 Brown",
+      "tag": "可复",
+      "color": "6E4B32"
+     },
+     {
+      "name": "杏色 Apricot",
+      "tag": "试色",
+      "color": "F2C6A0"
+     },
+     {
+      "name": "香槟色 Champagne",
+      "tag": "试色",
+      "color": "E8D0AA"
+     }
+    ]
+   },
+   "add": {
+    "title": "站内供给  加色（10 色）",
+    "expect": 10,
+    "items": [
+     {
+      "name": "黑色 Black",
+      "tag": "主推",
+      "color": "111111"
+     },
+     {
+      "name": "白色 White",
+      "tag": "主推",
+      "color": "FFFFFF"
+     },
+     {
+      "name": "灰色 Grey",
+      "tag": "定向",
+      "color": "8A8F96"
+     },
+     {
+      "name": "银灰色 Silvery Grey",
+      "tag": "定向",
+      "color": "C0C4C9"
+     },
+     {
+      "name": "深灰色 Dark Grey",
+      "tag": "定向",
+      "color": "555A60"
+     },
+     {
+      "name": "肤色 Skin Tone",
+      "tag": "定向",
+      "color": "E8BEA0"
+     },
+     {
+      "name": "铅灰色 Lead Color",
+      "tag": "定向",
+      "color": "787E86"
+     },
+     {
+      "name": "混色 Variegation",
+      "tag": "定向",
+      "color": "linear-gradient(90deg, #6B7280 0.0%, #6B7280 20.0%), linear-gradient(90deg, #FFFFFF 20.0%, #FFFFFF 40.0%), linear-gradient(90deg, #B0B7C0 40.0%, #B0B7C0 60.0%), linear-gradient(90deg, #8A8F98 60.0%, #8A8F98 80.0%), linear-gradient(90deg, #D5D9DE 80.0%, #D5D9DE 100.0%)"
+     },
+     {
+      "name": "杏色 Apricot",
+      "tag": "定向",
+      "color": "F2C6A0"
+     },
+     {
+      "name": "蓝色 Blue",
+      "tag": "随推",
+      "color": "1F4E9C"
+     }
+    ]
+   },
+   "drop": {
+    "title": "站内供给  汰换（10 色）",
+    "expect": 10,
+    "items": [
+     {
+      "name": "混合色 Mixed Color",
+      "tag": "回收",
+      "color": "linear-gradient(90deg, #6B7280 0.0%, #6B7280 20.0%), linear-gradient(90deg, #FFFFFF 20.0%, #FFFFFF 40.0%), linear-gradient(90deg, #B0B7C0 40.0%, #B0B7C0 60.0%), linear-gradient(90deg, #8A8F98 60.0%, #8A8F98 80.0%), linear-gradient(90deg, #D5D9DE 80.0%, #D5D9DE 100.0%)"
+     },
+     {
+      "name": "红色 Red",
+      "tag": "减SKC",
+      "color": "C8102E"
+     },
+     {
+      "name": "藏蓝色 Navy Blue",
+      "tag": "减SKC",
+      "color": "1B2A49"
+     },
+     {
+      "name": "紫色 Purple",
+      "tag": "减SKC",
+      "color": "7E3F98"
+     },
+     {
+      "name": "荧光绿 Fluorescent Green",
+      "tag": "减SKC",
+      "color": "39E114"
+     },
+     {
+      "name": "军绿色 Army Green",
+      "tag": "停加色",
+      "color": "4B5320"
+     },
+     {
+      "name": "黄色 Yellow",
+      "tag": "停加色",
+      "color": "F0C828"
+     },
+     {
+      "name": "酒红色 Claret Red",
+      "tag": "停加色",
+      "color": "7F1734"
+     },
+     {
+      "name": "浅黄绿色 Greenish Yellow",
+      "tag": "停加色",
+      "color": "C8DC5A"
+     },
+     {
+      "name": "草绿色 Grass Green",
+      "tag": "停加色",
+      "color": "6EAA50"
+     }
+    ]
+   }
+  },
+  {
+   "slide": 10,
+   "table": [
+    [
+     "一级品类",
+     "优先级",
+     "商品上架时间范围",
+     "推荐加色商品类型",
+     "近15天日均销量门槛",
+     "推荐skc宽度",
+     "推荐加色"
+    ],
+    [
+     "保暖",
+     "P0",
+     "近7天",
+     "7天内上架热卖款",
+     "4",
+     "2-3",
+     "P0：黑色Black 米色Beige"
+    ],
+    [
+     "",
+     "P1",
+     "近8-30天",
+     "8-30天内上架热卖款",
+     "4",
+     "",
+     "P1：藏蓝色Navy Blue 深灰色Dark Grey 浅蓝色Light Blue 紫罗兰Violet 军绿色Army Green 浅灰色Light Grey 亮蓝色Vibrant Blue 蜜桃色Peach"
+    ],
+    [
+     "",
+     "P2",
+     "近31天-90天",
+     "31天-90天内上架热卖款",
+     "10",
+     "",
+     ""
+    ],
+    [
+     "",
+     "P3",
+     "T365 ±60",
+     "去年同期上架，去年同期热卖",
+     "10",
+     "",
+     ""
+    ],
+    [
+     "",
+     "P4",
+     "近90-305天",
+     "非应季长青款",
+     "10",
+     "",
+     "P2：棕色Brown 粉色Pink 卡其Khaki"
+    ],
+    [
+     "",
+     "P5",
+     "近730天",
+     "上架时间超1年近期热卖款",
+     "23",
+     "",
+     ""
+    ]
+   ],
+   "pic": [
+    0.45,
+    3.98,
+    4.22,
+    2.3
+   ],
+   "group": "童内",
+   "cat": "保暖",
+   "pageno": "10",
+   "subtitle": "选色指南按上架时间对号，边际定色数，清单定具体颜色；清单已剔除本品类汰换色",
+   "conclusion": "结论：3色25%最高之后无爆款出现　→　最优 3 色、封顶 3 色，推荐宽度 2-3 色",
+   "bottom": "黑、米是站内外共认色，先按 2-3 色打底；藏蓝、深灰、亮蓝按站内缺口定向补",
+   "visual": {
+    "title": "站外热门商品颜色",
+    "note": "白色、杏色已被本品类判汰换，不再计入 P2；棕色、粉色、卡其作差异化试色",
+    "items": [
+     {
+      "name": "黑色 Black",
+      "tag": "可复",
+      "color": "111111"
+     },
+     {
+      "name": "白色 White",
+      "tag": "已汰换",
+      "color": "FFFFFF"
+     },
+     {
+      "name": "米色 Beige",
+      "tag": "可复",
+      "color": "E6D7BE"
+     },
+     {
+      "name": "棕色 Brown",
+      "tag": "试色",
+      "color": "6E4B32"
+     },
+     {
+      "name": "粉色 Pink",
+      "tag": "试色",
+      "color": "F4B4C4"
+     },
+     {
+      "name": "卡其 Khaki",
+      "tag": "试色",
+      "color": "C3B091"
+     },
+     {
+      "name": "杏色 Apricot",
+      "tag": "已汰换",
+      "color": "F2C6A0"
+     }
+    ]
+   },
+   "add": {
+    "title": "站内供给  加色（10 色）",
+    "expect": 10,
+    "items": [
+     {
+      "name": "黑色 Black",
+      "tag": "主推",
+      "color": "111111"
+     },
+     {
+      "name": "藏蓝色 Navy Blue",
+      "tag": "定向",
+      "color": "1B2A49"
+     },
+     {
+      "name": "深灰色 Dark Grey",
+      "tag": "定向",
+      "color": "555A60"
+     },
+     {
+      "name": "浅蓝色 Light Blue",
+      "tag": "定向",
+      "color": "A8CDEB"
+     },
+     {
+      "name": "紫罗兰 Violet",
+      "tag": "定向",
+      "color": "785AA0"
+     },
+     {
+      "name": "军绿色 Army Green",
+      "tag": "定向",
+      "color": "4B5320"
+     },
+     {
+      "name": "浅灰色 Light Grey",
+      "tag": "定向",
+      "color": "D5D8DC"
+     },
+     {
+      "name": "亮蓝色 Vibrant Blue",
+      "tag": "定向",
+      "color": "008CFF"
+     },
+     {
+      "name": "米色 Beige",
+      "tag": "随推",
+      "color": "E6D7BE"
+     },
+     {
+      "name": "蜜桃色 Peach",
+      "tag": "随推",
+      "color": "FFB496"
+     }
+    ]
+   },
+   "drop": {
+    "title": "站内供给  汰换（9 色）",
+    "expect": 9,
+    "items": [
+     {
+      "name": "白色 White",
+      "tag": "回收",
+      "color": "FFFFFF"
+     },
+     {
+      "name": "杏色 Apricot",
+      "tag": "回收",
+      "color": "F2C6A0"
+     },
+     {
+      "name": "灰色 Grey",
+      "tag": "减SKC",
+      "color": "8A8F96"
+     },
+     {
+      "name": "粉红色 Pink Red",
+      "tag": "减SKC",
+      "color": "E6788C"
+     },
+     {
+      "name": "紫色 Purple",
+      "tag": "减SKC",
+      "color": "7E3F98"
+     },
+     {
+      "name": "红色 Red",
+      "tag": "减SKC",
+      "color": "C8102E"
+     },
+     {
+      "name": "驼色 Camel",
+      "tag": "停加色",
+      "color": "C19A6B"
+     },
+     {
+      "name": "黄色 Yellow",
+      "tag": "停加色",
+      "color": "F0C828"
+     },
+     {
+      "name": "混色 Variegation",
+      "tag": "停加色",
+      "color": "linear-gradient(90deg, #6B7280 0.0%, #6B7280 20.0%), linear-gradient(90deg, #FFFFFF 20.0%, #FFFFFF 40.0%), linear-gradient(90deg, #B0B7C0 40.0%, #B0B7C0 60.0%), linear-gradient(90deg, #8A8F98 60.0%, #8A8F98 80.0%), linear-gradient(90deg, #D5D9DE 80.0%, #D5D9DE 100.0%)"
+     }
+    ]
+   }
+  },
+  {
+   "slide": 11,
+   "table": [
+    [
+     "一级品类",
+     "优先级",
+     "商品上架时间范围",
+     "推荐加色商品类型",
+     "近15天日均销量门槛",
+     "推荐skc宽度",
+     "推荐加色"
+    ],
+    [
+     "家居服",
+     "P0",
+     "近7天",
+     "7天内上架热卖款",
+     "4",
+     "2-6",
+     "P0：蓝色Blue"
+    ],
+    [
+     "",
+     "P1",
+     "近8-30天",
+     "8-30天内上架热卖款",
+     "4",
+     "",
+     "P1：粉红色Pink Red 黑色Black 白色White 藏蓝色Navy Blue 灰色Grey 紫色Purple 天蓝色Sky Blue 杏色Apricot 米色Beige 浅蓝色Light Blue"
+    ],
+    [
+     "",
+     "P2",
+     "近31天-90天",
+     "31天-90天内上架热卖款",
+     "9",
+     "",
+     ""
+    ],
+    [
+     "",
+     "P3",
+     "T365 ±60",
+     "去年同期上架，去年同期热卖",
+     "9",
+     "",
+     ""
+    ],
+    [
+     "",
+     "P4",
+     "近90-305天",
+     "非应季长青款",
+     "9",
+     "",
+     "P2：多色Multicolor 粉色Pink 卡其Khaki 棕色Brown 婴儿蓝Baby Blue"
+    ],
+    [
+     "",
+     "P5",
+     "近730天",
+     "上架时间超1年近期热卖款",
+     "18",
+     "",
+     ""
+    ]
+   ],
+   "pic": [
+    0.45,
+    3.98,
+    4.3,
+    2.3
+   ],
+   "group": "童内",
+   "cat": "家居服",
+   "pageno": "11",
+   "subtitle": "选色指南按上架时间对号，边际定色数，清单定具体颜色；清单已剔除本品类汰换色",
+   "conclusion": "结论：4色36.4%最高，之后爆款率回落，降幅相比之下不明显　→　最优 4 色、封顶 6 色，推荐宽度 2-6 色",
+   "bottom": "蓝色是站内外共认色，先按 2-6 色铺开；粉红、黑、白补站内缺口，多色作 P2 差异化试色",
+   "visual": {
+    "title": "站外热门商品颜色",
+    "note": "多色、粉色已站内外共现，多色为主推；卡其、棕色、婴儿蓝作差异化试色",
+    "items": [
+     {
+      "name": "多色 Multicolor",
+      "tag": "可复",
+      "color": "linear-gradient(90deg, #6B7280 0.0%, #6B7280 20.0%), linear-gradient(90deg, #FFFFFF 20.0%, #FFFFFF 40.0%), linear-gradient(90deg, #B0B7C0 40.0%, #B0B7C0 60.0%), linear-gradient(90deg, #8A8F98 60.0%, #8A8F98 80.0%), linear-gradient(90deg, #D5D9DE 80.0%, #D5D9DE 100.0%)"
+     },
+     {
+      "name": "粉色 Pink",
+      "tag": "可复",
+      "color": "F4B4C4"
+     },
+     {
+      "name": "蓝色 Blue",
+      "tag": "可复",
+      "color": "1F4E9C"
+     },
+     {
+      "name": "卡其 Khaki",
+      "tag": "试色",
+      "color": "C3B091"
+     },
+     {
+      "name": "棕色 Brown",
+      "tag": "试色",
+      "color": "6E4B32"
+     },
+     {
+      "name": "婴儿蓝 Baby Blue",
+      "tag": "试色",
+      "color": "A5CDEB"
+     }
+    ]
+   },
+   "add": {
+    "title": "站内供给  加色（11 色）",
+    "expect": 11,
+    "items": [
+     {
+      "name": "粉红色 Pink Red",
+      "tag": "主推",
+      "color": "E6788C"
+     },
+     {
+      "name": "黑色 Black",
+      "tag": "主推",
+      "color": "111111"
+     },
+     {
+      "name": "白色 White",
+      "tag": "主推",
+      "color": "FFFFFF"
+     },
+     {
+      "name": "藏蓝色 Navy Blue",
+      "tag": "定向",
+      "color": "1B2A49"
+     },
+     {
+      "name": "蓝色 Blue",
+      "tag": "定向",
+      "color": "1F4E9C"
+     },
+     {
+      "name": "灰色 Grey",
+      "tag": "定向",
+      "color": "8A8F96"
+     },
+     {
+      "name": "紫色 Purple",
+      "tag": "定向",
+      "color": "7E3F98"
+     },
+     {
+      "name": "天蓝色 Sky Blue",
+      "tag": "定向",
+      "color": "6EAFE1"
+     },
+     {
+      "name": "杏色 Apricot",
+      "tag": "定向",
+      "color": "F2C6A0"
+     },
+     {
+      "name": "米色 Beige",
+      "tag": "定向",
+      "color": "E6D7BE"
+     },
+     {
+      "name": "浅蓝色 Light Blue",
+      "tag": "随推",
+      "color": "A8CDEB"
+     }
+    ]
+   },
+   "drop": {
+    "title": "站内供给  汰换（10 色）",
+    "expect": 10,
+    "items": [
+     {
+      "name": "混合色 Mixed Color",
+      "tag": "回收",
+      "color": "linear-gradient(90deg, #6B7280 0.0%, #6B7280 20.0%), linear-gradient(90deg, #FFFFFF 20.0%, #FFFFFF 40.0%), linear-gradient(90deg, #B0B7C0 40.0%, #B0B7C0 60.0%), linear-gradient(90deg, #8A8F98 60.0%, #8A8F98 80.0%), linear-gradient(90deg, #D5D9DE 80.0%, #D5D9DE 100.0%)"
+     },
+     {
+      "name": "姜黄色 Turmeric",
+      "tag": "减SKC",
+      "color": "C89614"
+     },
+     {
+      "name": "浅灰色 Light Grey",
+      "tag": "减SKC",
+      "color": "D5D8DC"
+     },
+     {
+      "name": "绿色 Green",
+      "tag": "减SKC",
+      "color": "2E7D32"
+     },
+     {
+      "name": "红色 Red",
+      "tag": "减SKC",
+      "color": "C8102E"
+     },
+     {
+      "name": "混色 Variegation",
+      "tag": "停加色",
+      "color": "linear-gradient(90deg, #6B7280 0.0%, #6B7280 20.0%), linear-gradient(90deg, #FFFFFF 20.0%, #FFFFFF 40.0%), linear-gradient(90deg, #B0B7C0 40.0%, #B0B7C0 60.0%), linear-gradient(90deg, #8A8F98 60.0%, #8A8F98 80.0%), linear-gradient(90deg, #D5D9DE 80.0%, #D5D9DE 100.0%)"
+     },
+     {
+      "name": "军绿色 Army Green",
+      "tag": "停加色",
+      "color": "4B5320"
+     },
+     {
+      "name": "深绿色 Dark Green",
+      "tag": "停加色",
+      "color": "1B4D3E"
+     },
+     {
+      "name": "橄榄绿 Olive Green",
+      "tag": "停加色",
+      "color": "70803C"
+     },
+     {
+      "name": "砖红色 Brick Red",
+      "tag": "停加色",
+      "color": "963C2D"
+     }
+    ]
+   }
+  },
+  {
+   "slide": 12,
+   "table": [
+    [
+     "一级品类",
+     "优先级",
+     "商品上架时间范围",
+     "推荐加色商品类型",
+     "近15天日均销量门槛",
+     "推荐skc宽度",
+     "推荐加色"
+    ],
+    [
+     "童袜",
+     "P0",
+     "近7天",
+     "7天内上架热卖款",
+     "10",
+     "2+",
+     "P0：白色White 蓝色Blue 紫色Purple"
+    ],
+    [
+     "",
+     "P1",
+     "近8-30天",
+     "8-30天内上架热卖款",
+     "10",
+     "",
+     "P1：黑色Black 粉红色Pink Red 红色Red 灰色Grey 卡其Khaki 藏蓝色Navy Blue 天蓝色Sky Blue 咖啡色Coffee 绿色Green 米色Beige 黄色Yellow 浅灰色Light Grey"
+    ],
+    [
+     "",
+     "P2",
+     "近31天-90天",
+     "31天-90天内上架热卖款",
+     "21",
+     "",
+     ""
+    ],
+    [
+     "",
+     "P3",
+     "T365 ±60",
+     "去年同期上架，去年同期热卖",
+     "21",
+     "",
+     ""
+    ],
+    [
+     "",
+     "P4",
+     "近90-305天",
+     "非应季长青款",
+     "21",
+     "",
+     "P2：多色Multicolor 粉色Pink 浅粉色Baby Pink"
+    ],
+    [
+     "",
+     "P5",
+     "近730天",
+     "上架时间超1年近期热卖款",
+     "44",
+     "",
+     ""
+    ]
+   ],
+   "pic": [
+    0.45,
+    3.98,
+    4.36,
+    2.23
+   ],
+   "group": "童内",
+   "cat": "童袜",
+   "pageno": "12",
+   "subtitle": "选色指南按上架时间对号，边际定色数，清单定具体颜色；清单已剔除本品类汰换色",
+   "conclusion": "结论：只有3个SKC，1色爆款率最高受现有类型限制，无法判断其他SKC类型真实效益建议尝试加色看效果　→　仅 3 个 SKC 类型、1 色爆旺率最高，样本受限，建议加至 2 色以上观察",
+   "bottom": "白、蓝、紫是站内外共认色，先按 2 色起底再观察；黑、粉红、灰按缺口补",
+   "visual": {
+    "title": "站外热门商品颜色",
+    "note": "白、蓝、紫与站内重合构成 P0；多色、粉、浅粉作差异化试色",
+    "items": [
+     {
+      "name": "白色 White",
+      "tag": "可复",
+      "color": "FFFFFF"
+     },
+     {
+      "name": "蓝色 Blue",
+      "tag": "可复",
+      "color": "1F4E9C"
+     },
+     {
+      "name": "紫色 Purple",
+      "tag": "可复",
+      "color": "7E3F98"
+     },
+     {
+      "name": "多色 Multicolor",
+      "tag": "试色",
+      "color": "linear-gradient(90deg, #6B7280 0.0%, #6B7280 20.0%), linear-gradient(90deg, #FFFFFF 20.0%, #FFFFFF 40.0%), linear-gradient(90deg, #B0B7C0 40.0%, #B0B7C0 60.0%), linear-gradient(90deg, #8A8F98 60.0%, #8A8F98 80.0%), linear-gradient(90deg, #D5D9DE 80.0%, #D5D9DE 100.0%)"
+     },
+     {
+      "name": "粉色 Pink",
+      "tag": "试色",
+      "color": "F4B4C4"
+     },
+     {
+      "name": "浅粉色 Baby Pink",
+      "tag": "试色",
+      "color": "FAD2DC"
+     }
+    ]
+   },
+   "add": {
+    "title": "站内供给  加色（12 色）",
+    "expect": 12,
+    "items": [
+     {
+      "name": "白色 White",
+      "tag": "主推",
+      "color": "FFFFFF"
+     },
+     {
+      "name": "黑色 Black",
+      "tag": "主推",
+      "color": "111111"
+     },
+     {
+      "name": "粉红色 Pink Red",
+      "tag": "主推",
+      "color": "E6788C"
+     },
+     {
+      "name": "红色 Red",
+      "tag": "定向",
+      "color": "C8102E"
+     },
+     {
+      "name": "蓝色 Blue",
+      "tag": "定向",
+      "color": "1F4E9C"
+     },
+     {
+      "name": "灰色 Grey",
+      "tag": "定向",
+      "color": "8A8F96"
+     },
+     {
+      "name": "卡其 Khaki",
+      "tag": "定向",
+      "color": "C3B091"
+     },
+     {
+      "name": "藏蓝色 Navy Blue",
+      "tag": "定向",
+      "color": "1B2A49"
+     },
+     {
+      "name": "天蓝色 Sky Blue",
+      "tag": "定向",
+      "color": "6EAFE1"
+     },
+     {
+      "name": "咖啡色 Coffee",
+      "tag": "定向",
+      "color": "5A3E2D"
+     },
+     {
+      "name": "紫色 Purple",
+      "tag": "随推",
+      "color": "7E3F98"
+     },
+     {
+      "name": "绿色 Green",
+      "tag": "随推",
+      "color": "2E7D32"
+     }
+    ]
+   },
+   "drop": {
+    "title": "站内供给  汰换（10 色）",
+    "expect": 10,
+    "items": [
+     {
+      "name": "混色 Variegation",
+      "tag": "回收",
+      "color": "linear-gradient(90deg, #6B7280 0.0%, #6B7280 20.0%), linear-gradient(90deg, #FFFFFF 20.0%, #FFFFFF 40.0%), linear-gradient(90deg, #B0B7C0 40.0%, #B0B7C0 60.0%), linear-gradient(90deg, #8A8F98 60.0%, #8A8F98 80.0%), linear-gradient(90deg, #D5D9DE 80.0%, #D5D9DE 100.0%)"
+     },
+     {
+      "name": "荧光绿 Fluorescent Green",
+      "tag": "减SKC",
+      "color": "39E114"
+     },
+     {
+      "name": "浅黄色 Light Yellow",
+      "tag": "减SKC",
+      "color": "F5EB96"
+     },
+     {
+      "name": "土黄色 Earth-Yellow",
+      "tag": "减SKC",
+      "color": "AA823C"
+     },
+     {
+      "name": "浅粉灰 Pale Pinkish Gray",
+      "tag": "停加色",
+      "color": "D7C8CD"
+     },
+     {
+      "name": "孔雀蓝 Peacock Blue",
+      "tag": "停加色",
+      "color": "00718B"
+     },
+     {
+      "name": "栗色 Maroon",
+      "tag": "停加色",
+      "color": "800000"
+     },
+     {
+      "name": "象牙白 Ivory White",
+      "tag": "停加色",
+      "color": "FFFAF0"
+     },
+     {
+      "name": "太空灰 Space Gray",
+      "tag": "停加色",
+      "color": "6E737D"
+     },
+     {
+      "name": "深红色 Dark Red",
+      "tag": "停加色",
+      "color": "8B0000"
+     }
+    ]
+   }
+  },
+  {
+   "slide": 13,
+   "table": [
+    [
+     "一级品类",
+     "优先级",
+     "商品上架时间范围",
+     "推荐加色商品类型",
+     "近15天日均销量门槛",
+     "推荐skc宽度",
+     "推荐加色"
+    ],
+    [
+     "内裤",
+     "P0",
+     "近7天",
+     "7天内上架热卖款",
+     "8",
+     "2-4",
+     ""
+    ],
+    [
+     "",
+     "P1",
+     "近8-30天",
+     "8-30天内上架热卖款",
+     "8",
+     "",
+     "P1：混合色Mixed Color 蓝色Blue 深棕色Dark Brown 橘红色Red Orange 藏蓝色Navy Blue 浅粉灰Pale Pinkish Gray 天蓝色Sky Blue 宝蓝色Royal Blue 深灰色Dark Grey 土黄色Earth-Yellow"
+    ],
+    [
+     "",
+     "P2",
+     "近31天-90天",
+     "31天-90天内上架热卖款",
+     "15",
+     "",
+     ""
+    ],
+    [
+     "",
+     "P3",
+     "T365 ±60",
+     "去年同期上架，去年同期热卖",
+     "15",
+     "",
+     ""
+    ],
+    [
+     "",
+     "P4",
+     "近90-305天",
+     "非应季长青款",
+     "15",
+     "",
+     ""
+    ],
+    [
+     "",
+     "P5",
+     "近730天",
+     "上架时间超1年近期热卖款",
+     "35",
+     "",
+     ""
+    ]
+   ],
+   "pic": [
+    0.45,
+    3.98,
+    4.33,
+    2.3
+   ],
+   "group": "童内",
+   "cat": "内裤",
+   "pageno": "13",
+   "subtitle": "选色指南按上架时间对号，边际定色数，清单定具体颜色；清单已剔除本品类汰换色",
+   "conclusion": "结论：4色23.1%最高，之后未出现爆款　→　最优 4 色、封顶 4 色，推荐宽度 2-4 色",
+   "bottom": "站内外无共认色，站外黑白均已判汰换；按混色、蓝、深棕打底 2-4 色，先小批跑转化",
+   "visual": {
+    "title": "站外热门商品颜色",
+    "note": "站外仅给出黑、白两色，均在本品类汰换清单内，故 P0、P2 均为空",
+    "items": [
+     {
+      "name": "黑色 Black",
+      "tag": "已汰换",
+      "color": "111111"
+     },
+     {
+      "name": "白色 White",
+      "tag": "已汰换",
+      "color": "FFFFFF"
+     }
+    ]
+   },
+   "add": {
+    "title": "站内供给  加色（10 色）",
+    "expect": 10,
+    "items": [
+     {
+      "name": "混合色 Mixed Color",
+      "tag": "主推",
+      "color": "linear-gradient(90deg, #6B7280 0.0%, #6B7280 20.0%), linear-gradient(90deg, #FFFFFF 20.0%, #FFFFFF 40.0%), linear-gradient(90deg, #B0B7C0 40.0%, #B0B7C0 60.0%), linear-gradient(90deg, #8A8F98 60.0%, #8A8F98 80.0%), linear-gradient(90deg, #D5D9DE 80.0%, #D5D9DE 100.0%)"
+     },
+     {
+      "name": "蓝色 Blue",
+      "tag": "定向",
+      "color": "1F4E9C"
+     },
+     {
+      "name": "深棕色 Dark Brown",
+      "tag": "定向",
+      "color": "503726"
+     },
+     {
+      "name": "橘红色 Red Orange",
+      "tag": "定向",
+      "color": "E65A32"
+     },
+     {
+      "name": "藏蓝色 Navy Blue",
+      "tag": "定向",
+      "color": "1B2A49"
+     },
+     {
+      "name": "浅粉灰 Pale Pinkish Gray",
+      "tag": "定向",
+      "color": "D7C8CD"
+     },
+     {
+      "name": "天蓝色 Sky Blue",
+      "tag": "定向",
+      "color": "6EAFE1"
+     },
+     {
+      "name": "宝蓝色 Royal Blue",
+      "tag": "定向",
+      "color": "1E3A8A"
+     },
+     {
+      "name": "深灰色 Dark Grey",
+      "tag": "定向",
+      "color": "555A60"
+     },
+     {
+      "name": "土黄色 Earth-Yellow",
+      "tag": "随推",
+      "color": "AA823C"
+     }
+    ]
+   },
+   "drop": {
+    "title": "站内供给  汰换（10 色）",
+    "expect": 10,
+    "items": [
+     {
+      "name": "紫色 Purple",
+      "tag": "回收",
+      "color": "7E3F98"
+     },
+     {
+      "name": "黑色 Black",
+      "tag": "减SKC",
+      "color": "111111"
+     },
+     {
+      "name": "绿色 Green",
+      "tag": "减SKC",
+      "color": "2E7D32"
+     },
+     {
+      "name": "粉红色 Pink Red",
+      "tag": "减SKC",
+      "color": "E6788C"
+     },
+     {
+      "name": "白色 White",
+      "tag": "停加色",
+      "color": "FFFFFF"
+     },
+     {
+      "name": "浅蓝色 Light Blue",
+      "tag": "停加色",
+      "color": "A8CDEB"
+     },
+     {
+      "name": "米色 Beige",
+      "tag": "停加色",
+      "color": "E6D7BE"
+     },
+     {
+      "name": "杏色 Apricot",
+      "tag": "停加色",
+      "color": "F2C6A0"
+     },
+     {
+      "name": "香槟色 Champagne",
+      "tag": "停加色",
+      "color": "E8D0AA"
+     },
+     {
+      "name": "浅灰色 Light Grey",
+      "tag": "停加色",
+      "color": "D5D8DC"
+     }
+    ]
+   }
+  },
+  {
+   "slide": 14,
+   "table": [
+    [
+     "一级品类",
+     "优先级",
+     "商品上架时间范围",
+     "推荐加色商品类型",
+     "近15天日均销量门槛",
+     "推荐skc宽度",
+     "推荐加色"
+    ],
+    [
+     "文胸",
+     "P0",
+     "近7天",
+     "7天内上架热卖款",
+     "8",
+     "2-3",
+     ""
+    ],
+    [
+     "",
+     "P1",
+     "近8-30天",
+     "8-30天内上架热卖款",
+     "8",
+     "",
+     "P1：混合色Mixed Color 酒红色Claret Red 奶白色Milky 象牙白Ivory White 混色Variegation"
+    ],
+    [
+     "",
+     "P2",
+     "近31天-90天",
+     "31天-90天内上架热卖款",
+     "15",
+     "",
+     ""
+    ],
+    [
+     "",
+     "P3",
+     "T365 ±60",
+     "去年同期上架，去年同期热卖",
+     "15",
+     "",
+     ""
+    ],
+    [
+     "",
+     "P4",
+     "近90-305天",
+     "非应季长青款",
+     "15",
+     "",
+     "P2：白色White 多色Multicolor"
+    ],
+    [
+     "",
+     "P5",
+     "近730天",
+     "上架时间超1年近期热卖款",
+     "29",
+     "",
+     ""
+    ]
+   ],
+   "pic": [
+    0.45,
+    3.98,
+    3.59,
+    2.3
+   ],
+   "group": "童内",
+   "cat": "文胸",
+   "pageno": "14",
+   "subtitle": "选色指南按上架时间对号，边际定色数，清单定具体颜色；清单已剔除本品类汰换色",
+   "conclusion": "结论：2色27.8%最高，3色降至20%再往后加色效益不明显　→　最优 2 色、封顶 3 色，推荐宽度 2-3 色",
+   "bottom": "站内外无共认色，先复混色与酒红、奶白；白与多色作 P2 小批试色，宽度 2-3 色",
+   "visual": {
+    "title": "站外热门商品颜色",
+    "note": "站外首选白、备选黑：黑色在本品类汰换清单内，白色与多色作 P2 小批试色",
+    "items": [
+     {
+      "name": "白色 White",
+      "tag": "可复",
+      "color": "FFFFFF"
+     },
+     {
+      "name": "多色 Multicolor",
+      "tag": "试色",
+      "color": "linear-gradient(90deg, #6B7280 0.0%, #6B7280 20.0%), linear-gradient(90deg, #FFFFFF 20.0%, #FFFFFF 40.0%), linear-gradient(90deg, #B0B7C0 40.0%, #B0B7C0 60.0%), linear-gradient(90deg, #8A8F98 60.0%, #8A8F98 80.0%), linear-gradient(90deg, #D5D9DE 80.0%, #D5D9DE 100.0%)"
+     },
+     {
+      "name": "黄色 Yellow",
+      "tag": "已汰换",
+      "color": "F0C828"
+     },
+     {
+      "name": "红色 Red",
+      "tag": "已汰换",
+      "color": "C8102E"
+     },
+     {
+      "name": "黑色 Black",
+      "tag": "已汰换",
+      "color": "111111"
+     }
+    ]
+   },
+   "add": {
+    "title": "站内供给  加色（5 色）",
+    "expect": 5,
+    "items": [
+     {
+      "name": "混合色 Mixed Color",
+      "tag": "主推",
+      "color": "linear-gradient(90deg, #6B7280 0.0%, #6B7280 20.0%), linear-gradient(90deg, #FFFFFF 20.0%, #FFFFFF 40.0%), linear-gradient(90deg, #B0B7C0 40.0%, #B0B7C0 60.0%), linear-gradient(90deg, #8A8F98 60.0%, #8A8F98 80.0%), linear-gradient(90deg, #D5D9DE 80.0%, #D5D9DE 100.0%)"
+     },
+     {
+      "name": "酒红色 Claret Red",
+      "tag": "定向",
+      "color": "7F1734"
+     },
+     {
+      "name": "奶白色 Milky",
+      "tag": "定向",
+      "color": "F5F0E4"
+     },
+     {
+      "name": "象牙白 Ivory White",
+      "tag": "定向",
+      "color": "FFFAF0"
+     },
+     {
+      "name": "混色 Variegation",
+      "tag": "随推",
+      "color": "linear-gradient(90deg, #6B7280 0.0%, #6B7280 20.0%), linear-gradient(90deg, #FFFFFF 20.0%, #FFFFFF 40.0%), linear-gradient(90deg, #B0B7C0 40.0%, #B0B7C0 60.0%), linear-gradient(90deg, #8A8F98 60.0%, #8A8F98 80.0%), linear-gradient(90deg, #D5D9DE 80.0%, #D5D9DE 100.0%)"
+     }
+    ]
+   },
+   "drop": {
+    "title": "站内供给  汰换（10 色）",
+    "expect": 10,
+    "items": [
+     {
+      "name": "黑色 Black",
+      "tag": "回收",
+      "color": "111111"
+     },
+     {
+      "name": "紫色 Purple",
+      "tag": "回收",
+      "color": "7E3F98"
+     },
+     {
+      "name": "绿色 Green",
+      "tag": "回收",
+      "color": "2E7D32"
+     },
+     {
+      "name": "灰色 Grey",
+      "tag": "回收",
+      "color": "8A8F96"
+     },
+     {
+      "name": "粉红色 Pink Red",
+      "tag": "回收",
+      "color": "E6788C"
+     },
+     {
+      "name": "红色 Red",
+      "tag": "回收",
+      "color": "C8102E"
+     },
+     {
+      "name": "黄色 Yellow",
+      "tag": "减SKC",
+      "color": "F0C828"
+     },
+     {
+      "name": "天蓝色 Sky Blue",
+      "tag": "减SKC",
+      "color": "6EAFE1"
+     },
+     {
+      "name": "玫瑰红 Rose Red",
+      "tag": "停加色",
+      "color": "C83C5A"
+     },
+     {
+      "name": "杏色 Apricot",
+      "tag": "停加色",
+      "color": "F2C6A0"
+     }
+    ]
+   }
+  },
+  {
+   "slide": 15,
+   "table": [
+    [
+     "一级品类",
+     "优先级",
+     "商品上架时间范围",
+     "推荐加色商品类型",
+     "近15天日均销量门槛",
+     "推荐skc宽度",
+     "推荐加色"
+    ],
+    [
+     "背心上衣",
+     "P0",
+     "近7天",
+     "7天内上架热卖款",
+     "6",
+     "2-6",
+     "P0：白色White"
+    ],
+    [
+     "",
+     "P1",
+     "近8-30天",
+     "8-30天内上架热卖款",
+     "6",
+     "",
+     "P1：混合色Mixed Color 米色Beige 浅灰色Light Grey 咖啡色Coffee 杏色Apricot 砖红色Brick Red 胭脂红Rouge 深灰色Dark Grey 银灰色Silvery Grey"
+    ],
+    [
+     "",
+     "P2",
+     "近31天-90天",
+     "31天-90天内上架热卖款",
+     "14",
+     "",
+     ""
+    ],
+    [
+     "",
+     "P3",
+     "T365 ±60",
+     "去年同期上架，去年同期热卖",
+     "14",
+     "",
+     ""
+    ],
+    [
+     "",
+     "P4",
+     "近90-305天",
+     "非应季长青款",
+     "14",
+     "",
+     "P2：藏蓝色Navy Blue 宝蓝色Royal Blue"
+    ],
+    [
+     "",
+     "P5",
+     "近730天",
+     "上架时间超1年近期热卖款",
+     "32",
+     "",
+     ""
+    ]
+   ],
+   "pic": [
+    0.45,
+    3.98,
+    3.98,
+    2.3
+   ],
+   "group": "童内",
+   "cat": "背心上衣",
+   "pageno": "15",
+   "subtitle": "选色指南按上架时间对号，边际定色数，清单定具体颜色；清单已剔除本品类汰换色",
+   "conclusion": "结论：6色33.3%最高　→　最优 6 色、封顶 6 色，推荐宽度 2-6 色",
+   "bottom": "白色是站内外共认色，先按 2-6 色铺开；米、浅灰、咖啡按缺口补，藏蓝、宝蓝作试色　",
+   "visual": {
+    "title": "站外热门商品颜色",
+    "note": "白色与站内重合构成 P0；黑、红、黄、蓝已判汰换，藏蓝、宝蓝留作试色",
+    "items": [
+     {
+      "name": "白色 White",
+      "tag": "可复",
+      "color": "FFFFFF"
+     },
+     {
+      "name": "藏蓝色 Navy Blue",
+      "tag": "试色",
+      "color": "1B2A49"
+     },
+     {
+      "name": "宝蓝色 Royal Blue",
+      "tag": "试色",
+      "color": "1E3A8A"
+     },
+     {
+      "name": "黑色 Black",
+      "tag": "已汰换",
+      "color": "111111"
+     },
+     {
+      "name": "红色 Red",
+      "tag": "已汰换",
+      "color": "C8102E"
+     },
+     {
+      "name": "黄色 Yellow",
+      "tag": "已汰换",
+      "color": "F0C828"
+     },
+     {
+      "name": "蓝色 Blue",
+      "tag": "已汰换",
+      "color": "1F4E9C"
+     }
+    ]
+   },
+   "add": {
+    "title": "站内供给  加色（10 色）",
+    "expect": 10,
+    "items": [
+     {
+      "name": "白色 White",
+      "tag": "主推",
+      "color": "FFFFFF"
+     },
+     {
+      "name": "混合色 Mixed Color",
+      "tag": "主推",
+      "color": "linear-gradient(90deg, #6B7280 0.0%, #6B7280 20.0%), linear-gradient(90deg, #FFFFFF 20.0%, #FFFFFF 40.0%), linear-gradient(90deg, #B0B7C0 40.0%, #B0B7C0 60.0%), linear-gradient(90deg, #8A8F98 60.0%, #8A8F98 80.0%), linear-gradient(90deg, #D5D9DE 80.0%, #D5D9DE 100.0%)"
+     },
+     {
+      "name": "米色 Beige",
+      "tag": "定向",
+      "color": "E6D7BE"
+     },
+     {
+      "name": "浅灰色 Light Grey",
+      "tag": "定向",
+      "color": "D5D8DC"
+     },
+     {
+      "name": "咖啡色 Coffee",
+      "tag": "定向",
+      "color": "5A3E2D"
+     },
+     {
+      "name": "杏色 Apricot",
+      "tag": "随推",
+      "color": "F2C6A0"
+     },
+     {
+      "name": "砖红色 Brick Red",
+      "tag": "随推",
+      "color": "963C2D"
+     },
+     {
+      "name": "胭脂红 Rouge",
+      "tag": "随推",
+      "color": "BE3C50"
+     },
+     {
+      "name": "深灰色 Dark Grey",
+      "tag": "随推",
+      "color": "555A60"
+     },
+     {
+      "name": "银灰色 Silvery Grey",
+      "tag": "随推",
+      "color": "C0C4C9"
+     }
+    ]
+   },
+   "drop": {
+    "title": "站内供给  汰换（10 色）",
+    "expect": 10,
+    "items": [
+     {
+      "name": "黑色 Black",
+      "tag": "回收",
+      "color": "111111"
+     },
+     {
+      "name": "红色 Red",
+      "tag": "回收",
+      "color": "C8102E"
+     },
+     {
+      "name": "粉红色 Pink Red",
+      "tag": "减SKC",
+      "color": "E6788C"
+     },
+     {
+      "name": "绿色 Green",
+      "tag": "减SKC",
+      "color": "2E7D32"
+     },
+     {
+      "name": "紫色 Purple",
+      "tag": "减SKC",
+      "color": "7E3F98"
+     },
+     {
+      "name": "黄色 Yellow",
+      "tag": "减SKC",
+      "color": "F0C828"
+     },
+     {
+      "name": "灰色 Grey",
+      "tag": "停加色",
+      "color": "8A8F96"
+     },
+     {
+      "name": "蓝色 Blue",
+      "tag": "停加色",
+      "color": "1F4E9C"
+     },
+     {
+      "name": "天蓝色 Sky Blue",
+      "tag": "停加色",
+      "color": "6EAFE1"
+     },
+     {
+      "name": "深绿色 Dark Green",
+      "tag": "停加色",
+      "color": "1B4D3E"
+     }
+    ]
+   }
+  }
+ ],
+ "trend": {
+  "page": "16",
+  "title": "社媒趋势  2026–2027 流行色",
+  "subtitle": "Pinterest 与 WGSN×Coloro 已发布热门颜色趋势，RGB 值可直接对版",
+  "cols": [
+   {
+    "label": "Pinterest 2026",
+    "colors": [
+     {
+      "cn": "冷蓝色",
+      "en": "Cool Blue",
+      "rgb": "RGB 215 239 255",
+      "css": "#D7EFFF"
+     },
+     {
+      "cn": "玉色",
+      "en": "Jade",
+      "rgb": "RGB 174 184 160",
+      "css": "#AEB8A0"
+     },
+     {
+      "cn": "李子紫",
+      "en": "Plum Noir",
+      "rgb": "RGB 53 30 40",
+      "css": "#351E28"
+     },
+     {
+      "cn": "山葵绿",
+      "en": "Wasabi",
+      "rgb": "RGB 233 240 86",
+      "css": "#E9F056"
+     },
+     {
+      "cn": "柿子色",
+      "en": "Persimmon",
+      "rgb": "RGB 255 92 52",
+      "css": "#FF5C34"
+     }
+    ]
+   },
+   {
+    "label": "Pinterest 2025",
+    "colors": [
+     {
+      "cn": "樱桃红",
+      "en": "Cherry Red",
+      "rgb": "RGB 116 7 14",
+      "css": "#74070E"
+     },
+     {
+      "cn": "奶油黄",
+      "en": "Butter Yellow",
+      "rgb": "RGB 255 237 168",
+      "css": "#FFEDA8"
+     },
+     {
+      "cn": "光环靛蓝",
+      "en": "Aura Indigo",
+      "rgb": "RGB 176 166 233",
+      "css": "#B0A6E9"
+     },
+     {
+      "cn": "泡菜绿",
+      "en": "Dill Green",
+      "rgb": "RGB 78 104 19",
+      "css": "#4E6813"
+     },
+     {
+      "cn": "阿尔卑斯燕麦色",
+      "en": "Alpine Oat",
+      "rgb": "RGB 240 231 218",
+      "css": "#F0E7DA"
+     }
+    ]
+   },
+   {
+    "label": "WGSN×Coloro 2026 秋冬",
+    "colors": [
+     {
+      "cn": "深青色",
+      "en": "Transformative Teal",
+      "rgb": "RGB 47 99 100",
+      "css": "#2F6364"
+     },
+     {
+      "cn": "蜡纸白",
+      "en": "Wax Paper",
+      "rgb": "RGB 244 227 190",
+      "css": "#F4E3BE"
+     },
+     {
+      "cn": "活力紫",
+      "en": "Fresh Purple",
+      "rgb": "RGB 104 69 141",
+      "css": "#68458D"
+     },
+     {
+      "cn": "可可粉棕",
+      "en": "Cocoa Powder",
+      "rgb": "RGB 105 81 84",
+      "css": "#695154"
+     },
+     {
+      "cn": "荧光绿",
+      "en": "Green Glow",
+      "rgb": "RGB 206 240 94",
+      "css": "#CEF05E"
+     }
+    ]
+   },
+   {
+    "label": "WGSN×Coloro 2027 秋冬",
+    "colors": [
+     {
+      "cn": "宝蓝色",
+      "en": "Luminous Blue",
+      "rgb": "RGB 27 63 141",
+      "css": "#1B3F8D"
+     },
+     {
+      "cn": "赭石色",
+      "en": "Russet",
+      "rgb": "RGB 104 52 45",
+      "css": "#68342D"
+     },
+     {
+      "cn": "宁静丁香紫",
+      "en": "Peaceful Lilac",
+      "rgb": "RGB 201 197 219",
+      "css": "#C9C5DB"
+     },
+     {
+      "cn": "玉米金黄",
+      "en": "Maize",
+      "rgb": "RGB 206 161 90",
+      "css": "#CEA15A"
+     },
+     {
+      "cn": "纵深绿",
+      "en": "Deep Green",
+      "rgb": "RGB 30 80 73",
+      "css": "#1E5049"
+     }
+    ]
+   }
+  ],
+  "foot": [
+   "这 20 个色是趋势方向，不是招商主推色",
+   "先在自己的颜色清单里找同族近色落地，确定有差异需求再单开 1 个试色 SKC"
+  ]
+ }
+}</script>
+<script>
+(function(){
+  const DATA = JSON.parse(document.getElementById('site-data').textContent);
+  const GROUPS = ['男内','童内'];
+  const TAG = {'可复':'b-ok','试色':'b-try','已汰换':'b-off','主推':'b-main','定向':'b-dir',
+               '随推':'b-follow','回收':'b-recycle','减SKC':'b-cut','停加色':'b-stop'};
+  const state = {group:'男内', idx:0, mode:'cat'};
+
+  const esc = s => String(s == null ? '' : s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  const css = v => /^[0-9a-fA-F]{3,8}$/.test(String(v || '')) ? '#' + v : String(v || '#fff');
+  const badge = t => t ? '<span class="badge ' + (TAG[t] || 'b-follow') + '">' + esc(t) + '</span>' : '';
+  const list = g => DATA.categories.filter(c => c.group === g);
+  const cur = () => list(state.group)[state.idx];
+
+  /* ---------- fixed head ---------- */
+  (function head(){
+    const c = DATA.cover;
+    const q = o =>
+      '<article class="qcard">' +
+        '<div class="qh"><span class="qlab">' + esc(o.label) + '</span><h3>' + esc(o.title) + '</h3></div>' +
+        '<p class="qsub">' + esc(o.sub) + '</p>' +
+        '<ul class="qlines">' + o.lines.map(l => '<li>' + esc(l) + '</li>').join('') + '</ul>' +
+        (o.foot ? '<p class="qfoot">' + esc(o.foot) + '</p>' : '') +
+      '</article>';
+    document.getElementById('stageInner').innerHTML =
+      '<div class="title-col">' +
+        '<p class="eyebrow">' + esc(c.eyebrow) + '</p>' +
+        '<h1>' + esc(c.title) + '</h1>' +
+        '<p class="sub">' + esc(c.subtitle) + '</p>' +
+        '<p class="tag">' + esc(c.tagline) + '</p>' +
+        (c.lead ? '<p class="lead">' + esc(c.lead) + '</p>' : '') +
+      '</div>' +
+      '<div class="q-row">' + q(c.q1) + q(c.q2) + '</div>' +
+      '<div class="blocks">' +
+        c.blocks.map(b => '<div class="blk"><span class="no">' + esc(b.no) + '</span>' +
+          '<div><h4>' + esc(b.title) + '</h4><p>' + esc(b.desc) + '</p></div></div>').join('') +
+        '<div class="blk t"><h4>' + esc(c.trend.title) + '</h4><p>' + esc(c.trend.desc) + '</p></div>' +
+      '</div>';
+    document.getElementById('foot').innerHTML =
+      '<span>' + esc(c.title) + ' · ' + esc(c.subtitle) + '</span>';
+  })();
+
+  /* ---------- nav ---------- */
+  document.getElementById('seg').innerHTML = GROUPS.map(g =>
+    '<button class="tab" role="tab" data-g="' + esc(g) + '" aria-selected="false">' +
+    esc(g) + '<i>' + list(g).length + '</i></button>').join('');
+
+  function renderChips(){
+    const items = list(state.group);
+    document.getElementById('chips').innerHTML = items.map((c, i) =>
+      '<button class="chip' + (state.mode === 'cat' && i === state.idx ? ' on' : '') +
+      '" data-i="' + i + '">' + esc(c.cat) + '</button>').join('');
+    document.querySelectorAll('#seg .tab').forEach(b =>
+      b.setAttribute('aria-selected', b.dataset.g === state.group ? 'true' : 'false'));
+  }
+
+  /* ---------- table ---------- */
+  const COLW = [92, 74, 132, 210, 152, 100];
+  function picksHTML(raw){
+    if (!raw) return '';
+    let head = '', rest = raw;
+    const k = raw.indexOf('：');
+    if (k > -1) { head = '<b>' + esc(raw.slice(0, k + 1)) + '</b>'; rest = raw.slice(k + 1); }
+    const toks = rest.split(/\s+/).filter(Boolean)
+      .map(t => '<span class="tok">' + esc(t) + '</span>').join(' ');
+    return head + toks;
+  }
+  function tableHTML(c){
+    const rows = c.table, n = rows.length - 1;
+    const head = rows[0].map(h => '<th>' + esc(h) + '</th>').join('');
+    let cg = '<colgroup>' + COLW.map(w => '<col style="width:' + w + 'px">').join('') +
+             '<col style="width:auto">' + '</colgroup>';
+    let body = '';
+    for (let i = 1; i < rows.length; i++){
+      const r = rows[i], p = (r[1] || '').toLowerCase();
+      const cls = p === 'p0' ? 'pill p0' : (p === 'p1' ? 'pill p1' : 'pill');
+      body += '<tr>';
+      if (i === 1) body += '<td class="c1" rowspan="' + n + '">' + esc(r[0]) + '</td>';
+      body += '<td class="pri"><span class="' + cls + '">' + esc(r[1]) + '</span></td>' +
+              '<td>' + esc(r[2]) + '</td><td>' + esc(r[3]) + '</td>' +
+              '<td class="num">' + esc(r[4]) + '</td>';
+      if (i === 1) body += '<td class="width" rowspan="' + n + '">' + esc(r[5]) + '</td>';
+      body += '<td class="picks">' + picksHTML(r[6]) + '</td></tr>';
+    }
+    return '<div class="tcard"><div class="twrap"><table>' + cg +
+           '<thead><tr>' + head + '</tr></thead><tbody>' + body + '</tbody></table></div></div>';
+  }
+
+  const vlist = (items, cls) => '<ul class="' + cls + '">' + items.map(it =>
+    '<li><span class="sw" style="background:' + esc(css(it.color)) + '"></span>' +
+    '<span class="nm">' + esc(it.name) + '</span>' + badge(it.tag) + '</li>').join('') + '</ul>';
+
+  function catHTML(c){
+    const total = list(c.group).length, i = state.idx;
+    return '<article class="cat">' +
+      '<div class="cat-top">' +
+        '<div class="bignum">' + esc(c.pageno) + '</div>' +
+        '<div class="cat-title"><span class="g">' + esc(c.group) + '</span>' +
+          '<h2>' + esc(c.cat) + '<em>' + esc(c.pageno) + '</em></h2>' +
+          '<p class="lede">' + esc(c.subtitle) + '</p></div>' +
+        '<div class="pager">' +
+          '<button class="pg" data-dir="-1"' + (i === 0 ? ' disabled' : '') + ' aria-label="上一品类">‹</button>' +
+          '<span class="pgc"><b>' + (i + 1) + '</b> / ' + total + '</span>' +
+          '<button class="pg" data-dir="1"' + (i === total - 1 ? ' disabled' : '') + ' aria-label="下一品类">›</button>' +
+        '</div>' +
+      '</div>' +
+      tableHTML(c) +
+      '<section class="edcard">' +
+        '<div class="chead"><h3>品类颜色边际</h3><span class="tag">MARGINAL</span></div>' +
+        '<p class="concl">' + esc(c.conclusion) + '</p>' +
+      '</section>' +
+      '<section class="vcard">' +
+        '<div class="chead"><h3>' + esc(c.visual.title) + '</h3><span class="tag">OUT-OF-SITE</span></div>' +
+        (c.visual.note ? '<p class="vnote">' + esc(c.visual.note) + '</p>' : '') +
+        vlist(c.visual.items, 'vgrid') +
+      '</section>' +
+      '<div class="panels">' +
+        '<section class="panel add">' +
+          '<div class="chead"><h3>' + esc(c.add.title.replace(/\s+/g, ' ')) + '</h3></div>' +
+          vlist(c.add.items, 'plist') + '</section>' +
+        '<section class="panel drop">' +
+          '<div class="chead"><h3>' + esc(c.drop.title.replace(/\s+/g, ' ')) + '</h3></div>' +
+          vlist(c.drop.items, 'plist') + '</section>' +
+      '</div>' +
+      '<div class="ribbon"><span class="mk">SUMMARY</span><p>' + esc(c.bottom) + '</p></div>' +
+    '</article>';
+  }
+
+  function trendHTML(){
+    const t = DATA.trend;
+    return '<article class="tview">' +
+      '<div class="cat-top">' +
+        '<div class="bignum">' + esc(t.page) + '</div>' +
+        '<div class="cat-title"><span class="g">通用章节</span>' +
+          '<h2>' + esc(t.title) + '<em>' + esc(t.page) + '</em></h2>' +
+          '<p class="lede">' + esc(t.subtitle) + '</p></div>' +
+      '</div>' +
+      '<div class="tgrid">' + t.cols.map(col =>
+        '<div class="tcol"><h4>' + esc(col.label) + '</h4>' + col.colors.map(c =>
+          '<div class="tcw"><span class="box" style="background:' + esc(css(c.css)) + '"></span>' +
+          '<div><div class="cn">' + esc(c.cn) + '</div><div class="en">' + esc(c.en) + '</div>' +
+          '<div class="rgb">' + esc(c.rgb) + '</div></div></div>').join('') + '</div>').join('') +
+      '</div>' +
+      '<div class="tfoot">' + t.foot.map(f => '<p>' + esc(f) + '</p>').join('') + '</div>' +
+    '</article>';
+  }
+
+  /* ---------- render ---------- */
+  const view = document.getElementById('view');
+  function paint(){
+    view.classList.remove('view');
+    void view.offsetWidth;
+    view.innerHTML = state.mode === 'trend' ? trendHTML() : catHTML(cur());
+    view.classList.add('view');
+    renderChips();
+    const top = document.querySelector('main').offsetTop - 8;
+    if (window.scrollY > top) window.scrollTo({top: top, behavior: 'smooth'});
+    const c = state.mode === 'trend' ? null : cur();
+    try { history.replaceState(null, '', state.mode === 'trend' ? '#trend' : '#c-' + c.slide); } catch (err) {}
+  }
+  function goCat(i){
+    const l = list(state.group);
+    if (i < 0 || i >= l.length) return;
+    state.idx = i; state.mode = 'cat'; paint();
+  }
+  function goGroup(g){
+    if (GROUPS.indexOf(g) < 0) return;
+    state.group = g; state.idx = 0; state.mode = 'cat'; paint();
+  }
+
+  document.getElementById('seg').addEventListener('click', e => {
+    const b = e.target.closest('.tab'); if (b) goGroup(b.dataset.g);
+  });
+  document.getElementById('chips').addEventListener('click', e => {
+    const b = e.target.closest('.chip'); if (b) goCat(+b.dataset.i);
+  });
+  document.getElementById('trendBtn').addEventListener('click', () => { state.mode = 'trend'; paint(); });
+  view.addEventListener('click', e => {
+    const b = e.target.closest('.pg');
+    if (b) goCat(state.idx + (+b.dataset.dir));
+  });
+  document.addEventListener('keydown', e => {
+    if (state.mode !== 'cat') return;
+    if (e.key === 'ArrowRight') goCat(state.idx + 1);
+    if (e.key === 'ArrowLeft') goCat(state.idx - 1);
+  });
+
+  const hash = location.hash || '';
+  if (hash === '#trend'){ state.mode = 'trend'; }
+  else {
+    const m = hash.match(/^#c-(\d+)$/);
+    if (m){
+      const t = DATA.categories.filter(c => String(c.slide) === m[1])[0];
+      if (t){ state.group = t.group; state.idx = list(t.group).indexOf(t); }
+    }
+  }
+  paint();
+})();
+</script>
+</body>
+</html>
